@@ -1,0 +1,121 @@
+<!doctype html>
+<html><head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Lumbar feedback</title> 
+	<link rel="stylesheet" href="../main/css/font.css">
+    <link rel="stylesheet" href="../main/css/normalize.css">
+    <link rel="stylesheet" href="../main/css/styles.css">  
+	<link rel="stylesheet" href="../main/css/responsive-min.css">
+	<link rel="stylesheet" href="../main/css/style-developing.css">
+<script src="../main/js/style-jen-simmons.js"></script>
+	<!--------add js extras normal------------------------------->
+	<link rel="stylesheet" href="../main/css/jquery.mobile-1.4.5.min.css">
+	<script src="../main/js/jquery.js"></script>
+	<script src="../main/js/jquery.mobile-1.4.5.min.js"></script>
+<script>
+function goBack() {
+    window.history.back();
+}
+</script>
+	<script language="JavaScript1.2">
+
+var testresults
+function checkemail(){
+var str=document.validation.emailcheck.value
+var filter=/^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i
+if (filter.test(str))
+testresults=true
+else{
+alert("Please input a valid email address!")
+testresults=false
+}
+return (testresults)
+}
+</script>
+
+<script>
+function checkbae(){
+if (document.layers||document.getElementById||document.all)
+return checkemail()
+else
+return true
+}
+</script>
+<script>
+function goBack() {
+    window.history.back();
+}
+</script>
+	<script>
+function printDiv(divName) {
+     var printContents = document.getElementById(divName).innerHTML;
+     var originalContents = document.body.innerHTML;
+     document.body.innerHTML = printContents;
+     window.print();
+     document.body.innerHTML = originalContents;
+}
+</script>
+<script type="text/javascript">
+$("document").ready(function() {
+	$("#loadhtml").click(loadHTML);
+	});
+	function loadHTML() {
+		$("#feedback-mod-physio").load("z-feedback-mod-physio.html");
+	}
+	$("#hide").click(function(){
+    $("#loadhtml").hide();
+});
+</script>
+<script type="text/javascript">
+$("document").ready(function() {
+	$("#loadhtml2").click(loadHTML2);
+	});
+	function loadHTML2() {
+		$("#feedback-mod-student").load("z-feedback-mod-student.html");
+	}
+	$("#hide").click(function(){
+    $("#loadhtml2").hide();
+});
+</script>
+  </head>
+  <body class="">
+	  <div data-role="page" id="start" data-theme="f" class="focus2">
+	  <main class="">	
+		  <div class="header"><h4><img src="../images/icon_contact_g.png" alt="communication" title="communication" /> lumbar feedback</h4></div>
+    <header> 
+    <h3 class="" data-role="header4" ></h3>
+   </header> 
+
+<div class="icon-stage">
+<ul class="flex-container-boxes nowrap tooltipnav">
+  <li class="flex-item"><a href="../learning/lumbar-index.html" rel="external" data-info="All"><img src="../images/icon_back_start.png" alt="back"></a></li>
+</ul>				
+</div>
+		  <h3>Feedback</h3>
+    <div class="focus">
+				<div class="flex-container">
+		<span class="flex-item3"><img src="../files/app/sym_commune_min.png"/></span></div>			          
+    <div class="container-border"> 
+		<div class="centrediv">
+		  <div class="" id="feedback-mod-student">
+				  <div class="big-form" id="loadhtml2"><h4><a href="#" rel="external"><span class="pre2-button"><img src="../images/icon_chevron_r.png"/> </span> &nbsp; Student questionnaire</a></h4></div>		
+            </div>  
+		  </div>
+		<p class="floatClear">&nbsp;</p>
+		<div class="centrediv" id="feedback-mod-physio">
+				  <div class="" id="loadhtml"><h4><a href="#" rel="external"><span class="pre2-button"><img src="../images/icon_chevron_r.png"/> </span> &nbsp; Physio questionnaire</a></h4></div>		
+            </div> 
+    <p class="floatClear mini">&nbsp;  </p> 
+		</div>
+  </div><!--End focus-->
+<div data-role="footer" data-type="horizontal" data-position="fixed" class="white">
+		<a href="../learning/lumbar-index.html" rel="external"><img src="../images/icon_back_start_blue.png" alt="back"></a> &nbsp;  <button onclick="goBack()" ><img src="../images/icon_back_a.png" alt="back"></button> &nbsp;
+				  </div><!-- /footer -->
+    </main>
+	  </div><!-- /start -->
+
+	  
+  </body>
+</html>

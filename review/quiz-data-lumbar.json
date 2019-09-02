@@ -1,0 +1,109 @@
+[
+	{
+		"question" : "what is this?",
+		"answers" : [
+			{"" : 0, "image" : "images/lumbar_01.jpg"},	
+			{"id" : 1, "text" : "Don't know"},
+			{"id" : 2, "text" : "L2"},
+			{"id" : 3, "text" : "Multifidus"},			
+			{"id" : 4, "text" : "T2" }
+		],
+		"correct" : 2		
+	},
+		{
+		"question" : "Which is this?",
+		"answers"  : [
+			{"id"  : 0, "image" : "images/lumbar_02.jpg" },
+			{"id"  : 1, "text" : "Don't know" },
+			{"id"  : 2, "text" : "transverse process" },			
+			{"id"  : 3, "text" : "nerve root" },
+			{"id"  : 4, "text" : "spinal cord" }
+			
+		],
+		"correct"  : 4
+	},
+	{
+		"question" : "Which is this?",
+		"answers"  : [
+			{"id"  : 0, "image" : "images/lumbar_03.jpg" },	
+			{"id"  : 1, "text" : "don't know" },
+			{"id"  : 2, "text" : "myotome L3"},
+			{"id"  : 3, "text" : "dermatome L3"},
+			{"id"  : 4, "text" : "muscle spasm"}			
+		],
+		"correct"  : 3
+	},
+	{
+		"question" : "What does this relate to?",
+		"answers"  : [
+			{"id"  : 0, "image" : "images/lumbar_04.jpg" },	
+			{"id"  : 1, "text" : "don't know" },
+			{"id"  : 2, "text" : "dermatome L5"},
+			{"id"  : 3, "text" : "myotome L5/S1"},
+			{"id"  : 4, "text" : "muscle tear"}			
+		],
+		"correct"  : 3
+	},
+	{
+		"question" : "What is this condition?",
+		"answers"  : [
+			{"id"  : 0, "image" : "images/lumbar_05.jpg" },
+			{"id"  : 1, "text" : "don't know"},
+			{"id"  : 2, "text" : "disc prolapse"},
+			{"id"  : 3, "text" : "vertebral fracture"},
+			{"id"  : 4, "text" : "spinal cord bleeding"}			
+		],
+		"correct"  : 2,
+		"feedback" : "(the disc has deformed)"
+	},
+	{
+		"question" : "What does this relate to?",
+		"answers"  : [
+			{"id"  : 0, "image" : "images/lumbar_06.jpg" },
+			{"id"  : 1, "text" : "don't know"},
+			{"id"  : 2, "text" : "bone flex/ muscle compress"},
+			{"id"  : 3, "text" : "prolapsed disc"},
+			{"id"  : 4, "text" : "lumbar stenosis"}			
+		],
+		"correct"  : 4,
+		"feedback" : "Though similar to prolapse, stenosis involves the bone."
+	},
+	{
+		"question" : "For dizziness what should I do?",
+		"answers"  : [
+			{"id"  : 0, "image" : "images/lumbar_07.jpg" },
+			{"id"  : 1, "text" : "don't know"},
+			{"id"  : 2, "text" : "stop and check with doctor"},
+			{"id"  : 3, "text" : "proceed without doctor"}			
+		],
+		"correct"  : 2,
+		"feedback" : "(except in emergency)."
+	},
+	{
+		"question" : "For drop attacks, should I stop treatment and refer to doctor?",
+		"answers"  : [
+			{"id"  : 0, "image" : "images/lumbar_08.jpg" },
+			{"id"  : 1, "text" : "don't know"},
+			{"id"  : 2, "text" : "stop and check with doctor"},
+			{"id"  : 3, "text" : "proceed without doctor"},
+			{"id"  : 4, "text" : "carry on"}
+			
+		],
+		"correct"  : 2,
+		"feedback" : "(except in emergency)."
+	},
+	{
+		"question" : "For malnutrition, should I stop treatment and refer to doctor?",
+		"answers"  : [
+			{"id"  : 0, "image" : "images/lumbar_09.jpg" },
+			{"id"  : 1, "text" : "don't know"},
+			{"id"  : 2, "text" : "stop and check with doctor"},
+			{"id"  : 3, "text" : "proceed without doctor"},
+			{"id"  : 4, "text" : "carry on"}
+			
+		],
+		"correct"  : 2,
+		"feedback" : "(except in emergency)."
+	}
+	
+]

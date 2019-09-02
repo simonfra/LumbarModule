@@ -1,0 +1,357 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+<!--[if IE]>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<![endif]-->
+<meta charset="utf-8">
+<title>Lumbar introduction</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="../main/css/blueimp-gallery.css">
+	<link rel="stylesheet" href="../main/css/bootstrap-theme.css">
+<link rel="stylesheet" href="../main/css/blueimp-gallery-indicator.css">
+	<a href="#" id="btnReload"><img src="../images/icon_back_a.png" alt="back"></a> 
+	<!--------add stylesheets normal------------------------------->
+	<link rel="stylesheet" href="../main/css/font.css">
+    <link rel="stylesheet" href="../main/css/normalize.css">
+    <link rel="stylesheet" href="../main/css/styles.css">  
+	<link rel="stylesheet" href="../main/css/responsive-min.css">	
+    <link rel="stylesheet" href="../main/css/style-developing.css">
+	<link rel="shortcut icon" href="../images/favicon.ico">	
+<script src="../main/js/style-jen-simmons.js"></script>
+	<!--------add js extras normal------------------------------->
+	<link rel="stylesheet" href="../main/css/jquery.mobile-1.4.5.min.css">
+	<script src="../main/js/jquery.js"></script>
+	<script src="../main/js/jquery.mobile-1.4.5.min.js"></script>
+	
+
+<!--------add stylesheets-------------------------------->
+    <script src="../js/jquery.ui.datepicker.js"></script>
+    <script id="mobile-datepicker" src="../js/jquery.mobile.datepicker.js"></script>
+<script>
+$( "#datepicker" ).datepicker();
+$( "#datepicker-end" ).datepicker-end();
+</script>
+<script id="popup-arrow-script">
+	$.mobile.document.on( "click", "#open-popupArrow", function( evt ) {
+		$( "#popupArrow" ).popup( "open", { x: evt.pageX, y: evt.pageY } );
+		evt.preventDefault();
+	});
+	</script>
+	<script>
+	$( document ).on( "pagecreate", function() {
+    $( ".popup" ).on({
+        popupbeforeposition: function() {
+            var maxHeight = $( window ).height() - 60 + "px";
+            $( ".popup img" ).css( "max-height", maxHeight );
+        }
+    });
+});
+</script>
+<script>
+function goBack() {
+    window.history.back();
+}
+</script>
+<script>
+	var textarea = document.querySelector('textarea');
+
+textarea.addEventListener('keydown', autosize);
+             
+function autosize(){
+  var el = this;
+  setTimeout(function(){
+    el.style.cssText = 'height:auto; padding:0';
+    // for box-sizing other than "content-box" use:
+    // el.style.cssText = '-moz-box-sizing:content-box';
+    el.style.cssText = 'height:' + el.scrollHeight + 'px';
+  },0);
+}
+</script>
+<script>
+$(document).ready(function(){
+    $("#h-medic").click(function(){
+        $("#go-medic").fadeIn("slow");
+    });
+	
+});
+</script>
+<script id="panel-init">
+		$(function() {
+			$( "body>[data-role='panel']" ).panel();
+		});
+	</script>
+<script type="text/javascript">
+$("document").ready(function() {
+	$("#loadhtml").click(loadHTML);
+	});
+	function loadHTML() {
+		$("#register-student").load("z-register-student.html");
+	}
+	$("#hide").click(function(){
+    $("#loadhtml").hide();
+});
+</script>	
+<script type="text/javascript">
+$("document").ready(function() {
+	$("#loadhtml2").click(loadHTML2);
+	});
+	function loadHTML2() {
+		$("#z-intro-library").load("z-intro-library.html");
+	}
+	$("#hide").click(function(){
+    $("#loadhtml2").hide();
+});
+</script>
+<script type="text/javascript">
+$("document").ready(function() {
+	$("#loadhtml3").click(loadHTML3);
+	});
+	function loadHTML3() {
+		$("#z-intro-soap").load("z-intro-soap.html");
+	}
+	$("#hide").click(function(){
+    $("#loadhtml2").hide();
+});
+</script>
+<style type="text/css">
+	.z-intro p  { title:#eee; }
+	.z-intro em  { font-size:2em; }
+/* Image map styles 		with thanks to css play cssplay.co.uk */
+.imageMap {width:100%; position:relative; margin:20px 0 100px 0;}
+.imageMap img {display:block; width:100%; border-radius:20px;}
+.imageMap .hotspots {width:100%; height:100%; position:absolute; left:0; top:0; visibility:hidden;}
+.imageMap a {display:block; position:absolute; background:#000; z-index:100; opacity:0; filter: alpha(opacity=20); border:1px solid transparent; border-radius:10px;}
+.imageMap a.p1 {left:32%; top:40%; width:9%; height:9%;}
+.imageMap a.p2 {left:70%; top:23%; width:9%; height:9%;}
+.imageMap a.p3 {left:40%; top:20%; width:9%; height:9%;}
+.imageMap a.p4 {left:52%; top:28%; width:9%; height:9%;}
+.imageMap a.p5 {left:40%; top:0%; width:9%; height:9%;}
+.imageMap a.p6 {left:52%; top:11%; width:9%; height:9%;}
+.imageMap a.p7 {left:32%; top:28%; width:9%; height:9%;}
+.imageMap a.p8 {left:71%; top:40%; width:9%; height:9%;}
+.imageMap a.p9 {left:87%; top:36%; width:9%; height:9%;}		
+		.imageMap a + p {position:absolute; left:0%; top:102%; width:100%; color:#000; display:none; }
+.imageMap:hover .hotspots {visibility:visible;}
+
+.imageMap b {display:block; position:absolute;  z-index:200; opacity:0.2; filter: alpha(opacity=20); padding:1px;
+-webkit-transition:0.75s;
+-moz-transition:0.75s;
+-o-transition:0.75s;
+transition:0.75s;
+}
+.imageMap b.b1 {left:32%; top:40%; width:9%; height:9%;}
+.imageMap b.b2 {left:70%; top:23%; width:9%; height:9%;}
+.imageMap b.b3 {left:40%; top:20%; width:9%; height:9%;}
+.imageMap b.b4 {left:52%; top:28%; width:9%; height:9%;}
+.imageMap b.b5 {left:40%; top:0%; width:9%; height:9%;}
+.imageMap b.b6 {left:52%; top:11%; width:9%; height:9%;}
+.imageMap b.b7 {left:32%; top:28%; width:9%; height:9%;}
+.imageMap b.b8 {left:71%; top:40%; width:9%; height:9%;}
+.imageMap b.b9 {left:87%; top:36%; width:9%; height:9%;}		
+		
+.imageMap .hotspots div:hover b {width:0; padding:0;}
+.imageMap .hotspots div:hover p {display:block;}
+.imageMap .hotspots div:hover a {background:#fff; z-index:100; opacity:0.9; filter: alpha(opacity=30); border:0px solid #000;}
+</style>
+</head>
+<body class="" id="page">
+ 	  <!-- The Gallery as lightbox dialog, should be a child element of the document body -->
+<div id="blueimp-gallery" class="blueimp-gallery blueimp-gallery-controls">
+    <div class="slides"></div>
+    <h3 class="title"></h3>
+    <a class="prev">‹</a>
+    <a class="next">›</a>
+    <a class="close">×</a>
+    <a class="play-pause"></a>
+    <ol class="indicator"></ol>
+</div> 
+	<!-- Start of  page: #start -->
+<div data-role="page" id="start">
+		<main class="index-blend"> 
+	  <div class="header"><h4>Lumbar pre-learning</h4></div>
+    <header data-role="header4" class="header6"> 
+    <h3 class="white-purple"></h3>
+   </header> 
+	<div class="icon-stage">
+<ul class="flex-container-boxes nowrap tooltipnav">
+  <li class="flex-item"><a href="../learning/lumbar-index.html" rel="external" data-info="All"><img src="../images/icon_back_start.png" alt="back"></a></li>
+  <li class="flex-item-grey active-flex"><a href="#start"  rel="nofollow" data-info="Start"> &nbsp; </a></li>
+  <li class="flex-item-grey4 "><a href="#register"  rel="nofollow" data-info="Register">&nbsp; </a></li>
+  <li class="flex-item-grey4  "><a href="#intro" rel="nofollow" data-info="Introduction"> &nbsp; </a></li>
+	<li class="flex-item-grey4  "><a href="#check" rel="nofollow" data-info="Check knowledge"> &nbsp; </a></li>
+</ul>	
+</div><!-- /icon-stage --> 
+  <div id="" class="focus">
+	  <h3>lumbar pre-learning</h3>
+	  	  <div class="flex-container">
+		<span class="flex-item3"><img src="../files/app/sym_sign_k.png"/></span></div>
+			        
+    <div class="container-border">
+   			<ul  data-role="listview"  data-theme="a" class="ui-listview-outer white"> 						
+				<li class="listview-yellow"><a href="#register" rel="nofollow">  &nbsp; Student registration</a></li>	
+				<li class="listview-yellow"><a href="#intro" rel="nofollow"> &nbsp; Introduction </a></li>
+				<li class="listview-yellow"><a href="#check" rel="nofollow">  &nbsp; Pre-learning test </a></li>
+		     </ul>
+		<p class="">&nbsp;</p>
+    </div>  
+	  </div><!-- /subjective-->
+		  
+<!-- /content -->
+	</main>
+	<div data-role="footer" data-type="horizontal" data-position="fixed" class="white">
+		<a href="../learning/lumbar-index.html" rel="external"><img src="../images/icon_back_start_blue.png" alt="back" /></a> &nbsp; &nbsp; <button onclick="goBack()" ><img src="../images/icon_back_a.png" alt="back" /></button> &nbsp; &nbsp;  &nbsp;  
+				  </div><!-- /footer -->
+</div><!-- /page start -->
+
+
+
+	
+	<!-- page register -->
+<div data-role="page" id="register" data-theme="f" class="focus2">
+	  <main class="">	
+		  <div class="header"><h4><img src="../images/icon_contact_g.png" alt="communication" title="communication" /> Registration</h4></div>
+    <header> 
+    <h3 class="white" data-role="header4" ></h3>
+   </header> 
+<div class="icon-stage">
+<ul class="flex-container-boxes nowrap tooltipnav">
+  <li class="flex-item"><a href="../learning/lumbar-index.html" rel="external" data-info="All"><img src="../images/icon_back_start.png" alt="back"></a></li>
+  <li class="flex-item-grey "><a href="#start"  rel="nofollow" data-info="Start"> &nbsp; </a></li>
+  <li class="flex-item-grey4 active-flex"><a href="#register"  rel="nofollow" data-info="Register">&nbsp; </a></li>
+  <li class="flex-item-grey4  "><a href="#intro" rel="nofollow" data-info="Introduction"> &nbsp; </a></li>
+	<li class="flex-item-grey4  "><a href="#check" rel="nofollow" data-info="Pre-learning test"> &nbsp; </a></li>
+</ul>				
+</div>		  
+		  <div class="centrediv">
+			  <h2>Student registration</h2>		
+		  <img src="../files/app/sym_student.png" class="" alt="physio feedback" title="physio feedback" />
+			  	  
+		  
+     <p>Kindly note that this student registration is done with teaching physio present</p>
+			  <div class="centrediv">
+		
+			<div class="flex-container-wrap" id="register-student">
+				  <div class="big-form" id="loadhtml"><a href="#" rel="external"><span class="pre-button"><img src="../images/icon_grey_r.png" class="" alt="start" title="start" /> &nbsp; &nbsp; &nbsp;</span> &nbsp; Start questionnaire</a></div>		
+            </div> 
+				  
+				  
+		  </div>	
+	
+         <p class="mini"></p>
+<p class="floatClear">&nbsp;</p>            
+    <p class="floatClear mini">&nbsp;  </p>  
+		</div>    
+</main>
+<div data-role="footer" data-type="horizontal" data-position="fixed" class="white">
+		<a href="#start" rel="nofollow"><img src="../images/icon_back_start_blue.png" alt="back"></a> &nbsp; <button onclick="goBack()" ><img src="../images/icon_back_a.png" alt="back"></button> &nbsp;   
+				  </div><!-- /footer -->
+</div><!-- /page register -->
+	
+
+	<!-- page intro -->
+<div data-role="page" id="intro" data-theme="f" class="focus2">
+		  <!-- The Gallery as lightbox dialog, should be a child element of the document body -->
+
+	  <main class="">	
+		  <div class="header"><h4><img src="../images/icon_contact_g.png" alt="communication" title="communication" /> Introduction</h4></div>
+    <header> 
+    <h3 class="white" data-role="header4" ></h3>
+   </header> 
+<div class="icon-stage">
+<ul class="flex-container-boxes nowrap tooltipnav">
+  <li class="flex-item"><a href="../learning/lumbar-index.html" rel="external" data-info="All"><img src="../images/icon_back_start.png" alt="back"></a></li>
+  <li class="flex-item-grey "><a href="#start"  rel="nofollow" data-info="Start"> &nbsp; </a></li>
+  <li class="flex-item-grey4 "><a href="#register"  rel="nofollow" data-info="Register">&nbsp; </a></li>
+  <li class="flex-item-grey4  active-flex"><a href="#intro" rel="nofollow" data-info="Introduction"> &nbsp; </a></li>
+	<li class="flex-item-grey4  "><a href="#check" rel="nofollow" data-info="Pre-learning test"> &nbsp; </a></li>
+</ul>				
+</div>		  
+		  <div class="centrediv">
+		 			  <h2>Introduction</h2>
+			  <p>The following introductory walk-throughs are designed to acquaint the student with what to expect when using the modules. </p>
+			  <p class="">(We use the lumbar module here only to represent a structure that is common to all. Captions appear on hovering over any image and the crosses close the relevant walk-through)</p>
+			  <h4>Two guided walk-throughs</h4>
+			  <div class="flex-container-wrap" id="z-intro-library" >
+				  <div class="big-form" id="loadhtml2"><a href="#" rel="external"><span class="pre-button"><img src="../images/icon_grey_r.png" class="" alt="start" title="start" /> &nbsp; &nbsp; &nbsp;</span> &nbsp; the  Library</a></div>		
+            </div> 
+			  <div class="flex-container-wrap" id="z-intro-soap" >
+				  <div class="big-form" id="loadhtml3"><a href="#" rel="external"><span class="pre-button"><img src="../images/icon_grey_r.png" class="" alt="start" title="start" /> &nbsp; &nbsp; &nbsp;</span> &nbsp;  S <img src="../images/dot_grey.png" alt="dot" /> O <img src="../images/dot_grey.png" alt="dot" /> A <img src="../images/dot_grey.png" alt="dot" /> P </a></div>		
+            </div>
+	  <p class="floatClear"></p>
+  </div>
+
+    
+</main>
+<div data-role="footer" data-type="horizontal" data-position="fixed" class="white">
+		<a href="#start" rel="nofollow"><img src="../images/icon_back_start_blue.png" alt="back"></a> &nbsp; <button onclick="goBack()" ><img src="../images/icon_back_a.png" alt="back"></button> &nbsp;   
+				  </div><!-- /footer -->
+</div><!-- /page intro -->	
+	
+	
+<!-- page: check -->
+<div data-role="page" id="check" data-theme="f" class="focus2">
+	<main class="white"> 
+		<div class="header"><h4>test anatomy</h4></div>
+    <header data-role="header4" class="header6"> 
+    <h3 class="white-purple"></h3>
+   </header> 
+	<div class="icon-stage">
+<ul class="flex-container-boxes nowrap tooltipnav">
+  <li class="flex-item"><a href="../learning/lumbar-index.html" rel="external" data-info="All"><img src="../images/icon_back_start.png" alt="back"></a></li>
+  <li class="flex-item-grey "><a href="#start"  rel="nofollow" data-info="Start"> &nbsp; </a></li>
+  <li class="flex-item-grey4 "><a href="#register"  rel="nofollow" data-info="Register">&nbsp; </a></li>
+  <li class="flex-item-grey4  "><a href="#intro" rel="nofollow" data-info="Introduction"> &nbsp; </a></li>
+	<li class="flex-item-grey4 active-flex "><a href="#check" rel="nofollow" data-info="Pre-learning test"> &nbsp; </a></li>
+</ul>	
+</div><!-- /icon-stage --> 
+	<div role="main" class="ui-content">
+				<h2>Pre-learning test</h2>
+<p>Without looking first, can you write down the names that correspond to the following numbers?<br/> Once finished, hover to check your answers!</p>
+<div class="flex-container-wrap">
+  <div class="flex-item-map"> 
+	 <div class="imageMap " aria-haspopup="true">
+  <img src="images/lum_quiz.jpg" alt=""  />
+  <div class="hotspots">
+	     <div title="Sacrum"><a href="#" class="p1 tooltips" rel="nofollow" aria-haspopup="true"><span class="tooltipstext">Sacrum</span></a><p><strong>Sacrum</strong> </p><b class="b1"></b></div>
+		<div title="Iliac crest"><a href="#" class="p2  tooltips" rel="nofollow" aria-haspopup="true"><span class="tooltipstext">Iliac crest</span></a><p><strong>Iliac crest</strong> of pelvis</p><b class="b2"></b></div>
+		<div title="L3"><a href="#" class="p3 tooltips" rel="nofollow" aria-haspopup="false"><span class="tooltipstext">L3 of lumbar vertebrae</span></a><p><strong>L3</strong> of lumbar vertebrae</p><b class="b3"></b></div>
+		<div title="Transverse process"><a href="#" class="p4 tooltips" rel="nofollow" aria-haspopup="false"><span class="tooltipstext">Transverse process</span></a><p><strong>Transverse process</strong> of L5 veterbra</p><b class="b4"></b></div>
+		<div title="Spinal cord"><a href="#" class="p5 tooltips" rel="nofollow" aria-haspopup="false"><span class="tooltipstext">Spinal cord</span></a><p><strong>Spinal cord</strong> </p><b class="b5"></b></div>
+		<div title="Nerve root"><a href="#" class="p6 tooltips" rel="nofollow" aria-haspopup="false"><span class="tooltipstext">Nerve root</span></a><p><strong>Nerve root</strong> </p><b class="b6"></b></div>	
+</div>
+	  </div>
+			 <p class="floatClear mini">&nbsp;</p>	
+				 </div>
+			  </div><!-- /container-wrap -->
+			 <p class="floatClear mini">&nbsp;</p>
+	 	  
+		
+		
+		</div>
+		
+	<!-- /content -->
+<div data-role="footer" data-type="horizontal" data-position="fixed" class="white">
+		<a href="../learning/lumbar-index.html" rel="external"><img src="../images/icon_back_start_blue.png" alt="back" /></a> &nbsp; &nbsp; <button onclick="goBack()" ><img src="../images/icon_back_a.png" alt="back" /></button> &nbsp; &nbsp;  &nbsp;  
+				  </div><!-- /footer -->
+	</main>
+</div><!-- /check -->
+	<!--------add stylesheets gallery------------------------------->
+
+<p class="floatClear">&nbsp;</p>
+
+
+<script>
+document.getElementById('soap2').onclick = function (event) {
+    event = event || window.event;
+    var target = event.target || event.srcElement,
+        link = target.src ? target.parentNode : target,
+        options = {index: link, event: event},
+        links = this.getElementsByTagName('a');
+    blueimp.Gallery(links, options);
+};
+</script>
+
+
+</body>
+</html>

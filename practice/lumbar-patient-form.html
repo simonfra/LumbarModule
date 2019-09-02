@@ -1,0 +1,185 @@
+<!doctype html>
+<html><head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Lumbar patient form</title> 
+	
+	<!--------add stylesheets normal------------------------------->
+	<link rel="stylesheet" href="../main/css/font.css">
+    <link rel="stylesheet" href="../main/css/normalize.css">
+    <link rel="stylesheet" href="../main/css/styles.css">  
+	<link rel="stylesheet" href="../main/css/responsive-min.css">
+    <link rel="stylesheet" href="../main/css/style-developing.css">
+	<link rel="shortcut icon" href="../images/favicon.ico">
+<script src="../main/js/style-jen-simmons.js"></script>
+<!--------add js extras normal------------------------------->
+	<link rel="stylesheet" href="../main/css/jquery.mobile-1.4.5.min.css">
+	<script src="../main/js/jquery.js"></script>
+	<script src="../main/js/jquery.mobile-1.4.5.min.js"></script>
+<script id="popup-arrow-script">
+	$.mobile.document.on( "click", "#open-popupArrow", function( evt ) {
+		$( "#popupArrow" ).popup( "open", { x: evt.pageX, y: evt.pageY } );
+		evt.preventDefault();
+	});
+	</script>
+	<script>
+	$( document ).on( "pagecreate", function() {
+    $( ".popup" ).on({
+        popupbeforeposition: function() {
+            var maxHeight = $( window ).height() - 60 + "px";
+            $( ".popup img" ).css( "max-height", maxHeight );
+        }
+    });
+});
+</script>
+<script>
+function goBack() {
+    window.history.back();
+}
+</script>
+<script>
+function printDiv(divName) {
+     var printContents = document.getElementById(divName).innerHTML;
+     var originalContents = document.body.innerHTML;
+     document.body.innerHTML = printContents;
+     window.print();
+     document.body.innerHTML = originalContents;
+}
+</script>		  
+  </head>
+  <body class="" id="">
+ <div data-role="page" id="start" data-theme="f" class="focus2">
+<!-- panel --><div data-role="panel" data-position="right" data-theme="b"  data-display="overlay" id="popupSubjective" class="panel">
+    <!-- panel --><p><strong>Subjective</strong> notes
+</p>
+    <p class="floatClear"><hr /></p>
+        <div data-role="collapsible" id="popupNestedSubjective" data-inset="false" data-theme="b" data-content-theme="a" data-collapsed-icon="arrow-r" data-expanded-icon="arrow-d">
+        <h2>What did the patient say?</h2>
+            <p>Provide as much detail as you can and describe the patients own words about themselves in terms of their function, disability, symptoms and history. Also include information from any family or caregivers and, if specific phrasing is used, enclose this in quotation marks. This will allow you or a future therapist to document the patients perception of their condition precisely and how it relates to their progress in rehabilitation, functional performance or quality of life.</p>
+
+<p>Dont:</p>
+<ul><li>Pass judgement on a patient e.g. "Patient is over-reacting again".</li>
+    <li>Document irrelevant information e.g. patient complaining about previous therapist.</li>
+    </ul>
+        </div><!-- /collapsible -->
+        <div data-role="collapsible" data-inset="false" data-theme="b" data-content-theme="a" data-collapsed-icon="arrow-r" data-expanded-icon="arrow-d">
+        <h2>essentially...</h2>
+            <ul><li>What did the patient say?</li>
+    <li>What did the caregiver say?</li>
+    <li>Any documentation from other health professionals?</li>
+    <li>What was the VAS scale?</li>
+    </ul>
+        </div><!-- /collapsible -->
+	   <div data-role="collapsible" data-inset="false" data-theme="b" data-content-theme="a" data-collapsed-icon="arrow-r" data-expanded-icon="arrow-d">
+			<h2>Using notes:</h2>
+			<p> Simply type a note and press "Enter" key. You can edit existing notes or delete a note. To delete all your notes, use "Clear". However, as this will remove all notes on this page  it is advised to copy and paste them into a document and store them elsewhere before clearing them here.</p>
+			</div><!-- /collapsible -->
+    <!-- /collapsible set -->
+<!-- /popup -->
+</div><!-- /panel -->
+	<main class="index-blend">
+   		<div class="header"><h4><img src="../images/icon-hand20g.png" alt="practice" title="practice" /> Lumbar S <img src="../images/dot_grey.png" alt="dot" /> O <img src="../images/dot_grey.png" alt="dot" /> A <img src="../images/dot_grey.png" alt="dot" /> P</h4></div>
+    <header data-role="header4" class="header6"> 
+    <h3 class="white-purple"></h3>
+   </header> 
+<div class="icon-stage">
+<ul class="flex-container-boxes nowrap tooltipnav">
+  <li class="flex-item"><a href="../learning/lumbar-index.html" rel="external" data-info="All"><img src="../images/icon_back_start.png" alt="back"></a></li>
+  <li class="flex-item-blue active-flex"><a href="lumbar-patient-form.html"  rel="external" data-info="Subjective notes"> &nbsp; </a></li>
+  <li class="flex-item-blue2 "><a href="lumbar-assessment.html"  rel="external" data-info="Objective/ assessment"> &nbsp; </a></li>
+  <li class="flex-item-green " ><a href="lumbar-treatment.html"  rel="external" data-info="Analysis/ treatment"> &nbsp; </a></li>
+  <li class="flex-item-green2 "><a href="lumbar-exercises.html"  rel="external" data-info="Plan/ review">  &nbsp; </a></li>
+</ul>			
+</div><!-- /icon-stage -->
+		
+			<div role="main" class="ui-content">
+
+				<p></p>
+      <h2><span class="big-form-black">S</span>ubjective notes <img src="../files/app/sym_sub_blank_ic.png" alt="subjective notes" title="subjective notes" />
+			</h2>
+				
+                <div class="centrediv"><div class="floatCentre  tiny">
+					
+          <p> <img src="../images/icon_blue_r2.png" alt="dot" /> <a href="lumbar-assessment.html" rel="external" class="big-form-blue" title="next"> Objective </a> <br/>(proceed to Objective assessment) <br/>
+       </p>
+
+          
+      </div></div>
+ <div id="subjective" class="ui-body-d ui-content w3-animate-zoom">	
+  <p><img src="../images/icon_vas_bw.png"  alt="" class=""/></p>
+			<p class="floatClear"></p>
+		<div class="centrediv">
+			<div id="container">
+            <ul id="theListlum1" contenteditable="true">
+              <li>My patient says...</li>
+            </ul>
+          <p><img src="../main/images/check-black.png" class=""  alt="symbol analysis" /> <span class="big-form-black"><a href="javascript:void();" id="saveAll">Save</a></span> &nbsp; | &nbsp; <img src="../main/images/delete-black.png" class=""  alt="symbol analysis" /> <span class="big-form-black"><a href="javascript:void();" id="clearAll">Clear</a></span></p>
+        </div><!-- /container --> 
+		  <p><span class="mini">(use info button below for guidance)</span></p>
+		</div><!-- /centrediv -->
+</div><!-- /subjective -->
+</div><!-- /main -->
+	</main>
+<div data-role="footer" data-type="horizontal" data-position="fixed" class="white">
+		<a href="../learning/lumbar-index.html" rel="external"><img src="../images/icon_back_start_blue.png" alt="back" /></a> &nbsp; <button onclick="goBack()" ><img src="../images/icon_back_a.png" alt="back" /></button> &nbsp;   &nbsp;  <a href="#popupSubjective" data-rel="popup" data-transition="pop" title="click for guidance tips"><img src="../images/icon_info_blue.png" class="" /></a> 
+				  </div><!-- /footer -->   
+</div><!-- /page -->  
+	
+<!-- page: notes -->
+<div data-role="page" id="notes" data-theme="a" class="focus2">
+	<div class="header"><h4><img src="../images/icon-hand20g.png" alt="practice" title="practice" /> Lumbar S <img src="../images/dot_grey.png" alt="dot" /> O <img src="../images/dot_grey.png" alt="dot" /> A <img src="../images/dot_grey.png" alt="dot" /> P</h4></div>
+    <header data-role="header4" class="header6"> 
+    <h3 class="white-purple"></h3>
+   </header> 
+<div class="icon-stage">
+<ul class="flex-container-boxes nowrap tooltipnav">
+  <li class="flex-item"><a href="../learning/lumbar-index.html" rel="external" data-info="All"><img src="../images/icon_back_start.png" alt="back"></a></li>
+  <li class="flex-item-blue active-flex"><a href="lumbar-patient-form.html"  rel="external" data-info="Subjective notes"> &nbsp; </a></li>
+  <li class="flex-item-blue2 "><a href="lumbar-assessment.html"  rel="external" data-info="Objective/ assessment"> &nbsp; </a></li>
+  <li class="flex-item-green " ><a href="lumbar-treatment.html"  rel="external" data-info="Analysis/ treatment"> &nbsp; </a></li>
+  <li class="flex-item-green2 "><a href="lumbar-exercises.html"  rel="external" data-info="Plan/ review">  &nbsp; </a></li>
+</ul>			
+</div><!-- /icon-stage -->
+	 <div class="centrediv"><div class="floatCentre gridify tiny">
+		  <h2>Taking notes <img src="../images/soap_min.jpg" alt="form" /></h2>
+		 <p>The following patient forms are for printing out and completion by hand. </p>
+          <p> <img src="../images/icon_chevron_r.png" alt="dot" /> <a href="../../print/patient_record_form.pdf" target="_blank" class="big-form-blue" title="pdf"> pdf </a> <br/>(standard) <br/>
+			  <img src="../images/icon_chevron_r.png" alt="dot" /> <a href="../../print/patient_record_form_one.pdf" target="_blank" class="big-form-blue" title="pdf"> pdf </a> <br/>(larger spaced) <br/>
+       </p>
+      </div></div>
+<div data-role="footer" data-theme="a" class="white"  data-position="fixed">
+		<a href="#start" rel="nofollow"><img src="../images/icon_back_start_blue.png" alt="back"></a> &nbsp; &nbsp;   <button onclick="goBack()" ><img src="../images/icon_back_a.png" alt="back"></button> &nbsp; &nbsp; 
+</div><!-- /footer -->
+</div><!-- /page notes -->
+	
+	
+<!--<script src="../main/js/soap-notes1.js"></script>-->
+<script type="text/javascript">
+	$(document).ready(function() {
+		var theListlum1 = document.getElementById('theListlum1');
+		$("#saveAll").click(function(e) {
+			e.preventDefault();
+			localStorage.setItem('todoListlum1', theListlum1.innerHTML);
+			
+		});
+		$("#clearAll").click(function(e) {
+			e.preventDefault();
+//			localStorage.clear();
+			window.localStorage.removeItem('todoListlum1', theListlum1.innerHTML);
+			location.reload();
+		});
+		
+		loadToDo();
+		
+		function loadToDo() {
+		  if ( localStorage.getItem('todoListlum1') ) {
+			theListlum1.innerHTML = localStorage.getItem('todoListlum1'); 
+			
+		  }
+		}
+	});
+</script>	
+	  
+  </body>
+</html>

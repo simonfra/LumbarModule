@@ -1,0 +1,631 @@
+<!doctype html>
+<html><head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Lumbar plan &amp; review </title> 
+	
+	<!--------add stylesheets normal------------------------------->
+	<link rel="stylesheet" href="../main/css/font.css">
+    <link rel="stylesheet" href="../main/css/normalize.css">
+    <link rel="stylesheet" href="../main/css/styles.css">  
+	<link rel="stylesheet" href="../main/css/responsive-min.css">
+    <link rel="stylesheet" href="../main/css/style-developing.css">	
+	<link rel="shortcut icon" href="../images/favicon.ico">	
+<script src="../main/js/style-jen-simmons.js"></script>
+	<!--------add js extras normal------------------------------->
+	<link rel="stylesheet" href="../main/css/jquery.mobile-1.4.5.min.css">
+	<script src="../main/js/jquery.js"></script>
+	<script src="../main/js/jquery.mobile-1.4.5.min.js"></script>
+<script id="popup-arrow-script">
+	$.mobile.document.on( "click", "#open-popupArrow", function( evt ) {
+		$( "#popupArrow" ).popup( "open", { x: evt.pageX, y: evt.pageY } );
+		evt.preventDefault();
+	});
+	</script>
+	<script>
+	$( document ).on( "pagecreate", function() {
+    $( ".popup" ).on({
+        popupbeforeposition: function() {
+            var maxHeight = $( window ).height() - 60 + "px";
+            $( ".popup img" ).css( "max-height", maxHeight );
+        }
+    });
+});
+</script>
+<script>
+function goBack() {
+    window.history.back();
+}
+</script>
+<script>
+function printDiv(divName) {
+     var printContents = document.getElementById(divName).innerHTML;
+     var originalContents = document.body.innerHTML;
+     document.body.innerHTML = printContents;
+     window.print();
+     document.body.innerHTML = originalContents;
+}
+</script>		  
+  </head>
+  <body class="ped">
+	  
+	  <!-- Start of  page: #start -->
+<div data-role="page" id="start" data-theme="f" class="focus2">
+<!-- panel --><div data-role="panel" data-position="right" data-theme="b"  data-display="overlay" id="popupPlan" class="panel">
+    <p><strong>Plan</strong>
+    notes
+<a href="#popupNestedPlan" data-rel="popup" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-icon-plus ui-btn-icon-left ui-btn-b" data-transition="pop"><img src="../images/edit-gold.png" alt="alert" class=""></a>
+</p>
+    <p class="floatClear"><hr /></p>
+        <div data-role="collapsible" id="popupNestedPlan" data-inset="false" data-theme="b" data-content-theme="a" data-collapsed-icon="arrow-r" data-expanded-icon="arrow-d">
+        <h2>What is needed:</h2>
+            <p>The final component of the note is used to outline the plan for future sessions. The therapist should report on what the patient's Home exercises will be, as well as the steps to take in order to reach the functional goals. Changes to the intervention strategy are documented in this section.</p>
+<p>Common errors:</p>
+<ul><li>The upcoming plan is not indicated.</li>
+<li>Vague description of the plan e.g. "Continue treatment".</li>
+</ul>
+        </div><!-- /collapsible -->
+        <div data-role="collapsible" data-inset="false" data-theme="b" data-content-theme="a" data-collapsed-icon="arrow-r" data-expanded-icon="arrow-d">
+        <h2>Essentially:</h2>
+           <ul>
+    <li>When is the next appointment</li>
+<li>What will you do at that appointment</li>
+<li>Any actions needed before the next appointment? (eg get crutches from next village)</li>
+</ul>
+<p>&nbsp; might need a reminder system here for either a diary system or an 'alarm clock' signal when imminent
+also an onward referral or discharge tab(? )</p>
+        </div><!-- /collapsible -->
+	<div data-role="collapsible" data-inset="false" data-theme="b" data-content-theme="a" data-collapsed-icon="arrow-r" data-expanded-icon="arrow-d">
+			<h2>Using notes:</h2>
+			<p> Simply type a note and press "Enter" key. You can edit existing notes or delete a note. To delete all your notes, use "Clear". However, as this will remove all notes on this page  it is advised to copy and paste them into a document and store them elsewhere before clearing them here.</p>
+			</div><!-- /collapsible -->
+    <!-- /collapsible set -->
+<!-- /popup -->
+</div><!-- /panel -->    
+<!--<main>-->
+<main class="index-blend">
+	<div class="header"><h4><img src="../images/icon-hand20g.png" alt="practice" title="practice" /> Lumbar S <img src="../images/dot_grey.png" alt="dot" /> O <img src="../images/dot_grey.png" alt="dot" /> A <img src="../images/dot_grey.png" alt="dot" /> P</h4></div>
+    <header data-role="header4" class="header6"> 
+    <h3 class="white-purple"></h3>
+   </header> 
+<div class="icon-stage">
+<ul class="flex-container-boxes nowrap tooltipnav">
+  <li class="flex-item"><a href="../learning/lumbar-index.html" rel="external" data-info="All"><img src="../images/icon_back_start.png" alt="back"></a></li>
+  
+  <li class="flex-item-blue "><a href="lumbar-patient-form.html"  rel="external" data-info="Subjective notes"> &nbsp; </a></li>
+  <li class="flex-item-blue2 "><a href="lumbar-assessment.html"  rel="external" data-info="Objective/ assessment"> &nbsp; </a></li>
+  <li class="flex-item-green " ><a href="lumbar-treatment.html"  rel="external" data-info="Analysis/ treatment"> &nbsp; </a></li>
+  <li class="flex-item-green2  active-flex"><a href="lumbar-exercises.html"  rel="external" data-info="Plan/ review">  &nbsp; </a></li>
+</ul>	
+</div><!-- /icon-stage -->
+
+<div role="main" class="ui-content focus1" data-theme="a" >
+
+    <h2>my <span class="big-form-black">P</span>lan notes <img src="../files/app/sym_pla_blank_ic.png" class=""  alt="symbol plan" /></h2>		
+		<div class="centrediv w3-animate-bottom">
+    <p> <span class="mini">(from my own observations of my patient)</span></p>
+<div id="container">
+            <ul id="theListped4" contenteditable="true">
+              
+                <li>My patient needs to be referred to:...</li>
+                <li>I need to get an assistive aid (tripod, stick, crutches, heel raise etc):...</li>
+                <li>Next review date:...</li>
+                <li>I need to clinically review:...</li>
+                <li>I want to focus on treatment number:...</li>
+                
+            </ul>
+          <p><img src="../main/images/check-black.png" class=""  alt="symbol analysis" /> <span class="big-form-black"><a href="javascript:void();" id="saveAll">Save</a></span> &nbsp; | &nbsp; <img src="../main/images/delete-black.png" class=""  alt="symbol analysis" /> <span class="big-form-black"><a href="javascript:void();" id="clearAll">Clear</a></span></p>
+        </div><!-- /container --> 
+		  <p><span class="mini">(use info button below for guidance)</span></p>	
+</div>
+
+    <!--End flex-container-->
+<!--	</div>	-->
+	<!--End flex-container-->
+	</div>
+<div data-role="footer" data-type="horizontal" data-position="fixed" class="white">
+		<a href="../learning/lumbar-index.html" rel="external"><img src="../images/icon_back_start_blue.png" alt="back" /></a> &nbsp; &nbsp; <button onclick="goBack()" ><img src="../images/icon_back_a.png" alt="back" /></button> &nbsp; &nbsp; &nbsp; &nbsp; 
+<!--    <a href="#popupPlan" data-rel="popup" data-transition="pop" title="click for guidance tips"><img src="../images/icon_info_blue.png" class="" /></a>  -->
+				  </div><!-- /footer -->  
+    </main>
+	</div><!-- /page start -->
+
+<!-- page: 1 -->
+<div data-role="page" id="t1" data-theme="a">
+	<header  data-role="header4" class="" > 
+    <h3 class="white">Lumbar</h3>
+		</header> <!-- /header -->
+	<div role="main" class="ui-content">
+    <div id="gallery-exercise1">
+    <div id="print1">
+<h2><strong>D1:</strong> Discogenic low back pain</h2>
+<p>done by patient</p>
+<div data-html="true">
+		    <table data-role="table" id="exercise-table-1" data-mode="reflow" class="ui-responsive exercise-table">
+		      <thead>
+		        <tr>
+		          <th data-priority="1">&nbsp;</th>
+                  <th data-priority="2">&nbsp;</th>
+                  <th data-priority="3">&nbsp;</th>
+                  <th data-priority="4">&nbsp;</th>
+		        </tr>
+		      </thead>
+		      <tbody>
+               <tr>
+                <th>1</th>
+		          <td> Gently pull up onto elbows</td>
+		          <td class="img-2col"><img src="../files/app/sylum01.png"  title="l01" class="gallery-exercise" alt="exercise"></td>
+                  <td><img src="../files/app/rep10x3.png" class="gallery-exercise" alt="exercise"></td>
+		        </tr>
+		        <tr>
+                <th>2</th>
+		          <td class="join"> Pelvic tilts</td>
+		          <td class="img-2col"><img src="../files/app/sylum02.png"  title="l02" class="gallery-exercise" alt="exercise"></td>
+                  <td class="img-2col"><img src="../files/app/rep10x3.png" class="gallery-exercise" alt="exercise"></td>
+		        </tr>
+		        <tr class="blank-td">
+                <th>3</th>
+		          <td > Bridging</td>
+		          <td class="img-2col"><img src="../files/app/sylum09.png"  title="l09" class="gallery-exercise" alt="exercise"></td>
+                  <td class="img-2col"><img src="../files/app/sylum10.png"  title="l10" class="gallery-exercise" alt="exercise"></td>
+		        </tr>
+				  <tr class="blank-td">
+                <th></th>
+		          <td > </td>
+		          <td class="img-2col"><img src="../files/app/rep10x3.png" class="gallery-exercise" alt="exercise"></td>
+                  <td class="img-2col"></td>
+		        </tr>
+		      </tbody>
+		    </table>
+		</div><!--/demo-html -->
+        </div><!--/print -->
+</div>    
+            <p class="floatClear">&nbsp;</p>      
+<input type="button" onclick="printDiv('print1')" value="print exercise" />
+	</div><!-- /content -->
+<div data-role="footer" data-theme="a"  data-position="fixed"  class="white">
+		<a href="#start" ><img src="../images/icon_back_start_blue.png" alt="back"></a> &nbsp; &nbsp; &nbsp; &nbsp;   <button onclick="goBack()" ><img src="../files/app/icback.png" alt="back"></button> &nbsp; &nbsp;  
+</div><!-- /footer -->
+</div><!-- /page 1 -->	  
+
+<!-- page: 2 -->
+<div data-role="page" id="t2" data-theme="a">
+	<header  data-role="header4" class="" > 
+    <h3 class="white">Lumbar</h3>
+		</header> <!-- /header -->
+	<div role="main" class="ui-content">
+    <div id="gallery2">
+    <div id="print2">
+<h2><strong>D2:</strong> Stenosis</h2>
+	<div data-html="true">
+		    <table data-role="table" id="exercise-table-2" data-mode="reflow" class="ui-responsive exercise-table">
+		      <thead>
+		        <tr>
+		          <th data-priority="1">&nbsp;</th>
+                  <th data-priority="2" >&nbsp;</th>
+                  <th data-priority="3">&nbsp;</th>
+                  <th data-priority="4">&nbsp;</th>
+		        </tr>
+		      </thead>
+		      <tbody>
+		        <tr>
+                <th>1</th>
+		          <td> Pelvic tilts</td>
+		          <td class="img-2col"><img src="../files/app/sylum02.png"  title="l02" class="gallery-exercise" alt="exercise"></td>
+                  <td class="img-2col"><img src="../files/app/rep10x3.png" class="gallery-exercise" alt="exercise"></td>
+		        </tr>
+		        <tr class="blank-td">
+                <th>2</th>
+                  <td> Knee rolling side to side</td>
+		          <td class="img-2col"><img src="../files/app/sylum08.png"  title="l08" class="gallery-exercise" alt="exercise"></td>
+                  <td class="img-2col"><img src="../files/app/sylum07.png"  title="l07" class="gallery-exercise" alt="exercise"></td>
+	            </tr>
+                <tr >
+                <th></th>
+                  <td> </td>
+		          <td class="img-2col"><img src="../files/app/rep5x2.png" class="gallery-exercise" alt="exercise"></td>
+                  <td class="img-2col"></td>
+	            </tr>
+		        <tr class="blank-td">
+                <th>3</th>
+		          <td> Squats</td>
+		          <td class="img-2col"><img src="../files/app/sylum12.png"  title="l12" class="gallery-exercise" alt="exercise"></td>
+		          <td class="img-2col"><img src="../files/app/sylum11.png"  title="l11" class="gallery-exercise" alt="exercise"></td>
+		        </tr>
+                <tr >
+                <th></th>
+                  <td> </td>
+		          <td class="img-2col"><img src="../files/app/rep5x2.png" class="gallery-exercise" alt="exercise"></td>
+                  <td class="img-2col"></td>
+	            </tr>
+		      </tbody>
+		    </table>
+		</div><!--/demo-html -->
+ </div>   
+            <p class="floatClear">&nbsp;</p>
+            <input type="button" onclick="printDiv('print2')" value="print exercise" />
+	</div>
+	</div><!-- /content -->
+<div data-role="footer" data-theme="a"  data-position="fixed"  class="white">
+		<a href="#start" ><img src="../images/icon_back_start_blue.png" alt="back"></a> &nbsp; &nbsp; &nbsp; &nbsp;   <button onclick="goBack()" ><img src="../files/app/icback.png" alt="back"></button> &nbsp; &nbsp;  
+</div><!-- /footer -->
+</div><!-- /page 2 -->
+
+<!-- page: 3 -->
+<div data-role="page" id="t3" data-theme="a">
+	<header  data-role="header4" class="" > 
+    <h3 class="white">Lumbar</h3>
+		</header> <!-- /header -->
+	<div role="main" class="ui-content">
+    <div id="gallery3">
+    <div id="print3">
+<h2><strong>D3:</strong> Facet joint pain</h2>
+	<div data-html="true">
+		    <table data-role="table" id="exercise-table-3" data-mode="reflow" class="ui-responsive exercise-table">
+		      <thead>
+		        <tr>
+		          <th data-priority="1">&nbsp;</th>
+                  <th data-priority="2" >&nbsp;</th>
+                  <th data-priority="3">&nbsp;</th>
+                  <th data-priority="4">&nbsp;</th>
+		        </tr>
+		      </thead>
+		      <tbody>
+		        <tr >
+                <th>1</th>
+		          <td> Pelvic tilts</td>
+		          <td class="img-2col"><img src="../files/app/sylum02.png"  title="l02" class="gallery-exercise" alt="exercise"></td>
+                  <td class="img-2col"><img src="../files/app/rep10x3.png" class="gallery-exercise" alt="exercise"></td>
+		        </tr>
+		        <tr class="blank-td">
+                <th>2</th>
+                  <td> Forward bending with seated trunk</td>
+		          <td class="img-2col"><img src="../files/app/sylum03.png"  title="l03" class="gallery-exercise" alt="exercise"></td>
+                  <td class="img-2col"><img src="../files/app/sylum04.png"  title="l04" class="gallery-exercise" alt="exercise"></td>
+	            </tr>
+                <tr >
+                <th></th>
+                  <td> </td>
+		          <td class="img-2col"><img src="../files/app/rep10x3.png" class="gallery-exercise" alt="exercise"></td>
+                  <td class="img-2col"></td>
+	            </tr>
+                <tr class="blank-td">
+                <th>3</th>
+                  <td> Knee rolling side to side</td>
+		          <td class="img-2col"><img src="../files/app/sylum08.png"  title="l08" class="gallery-exercise" alt="exercise"></td>
+                  <td class="img-2col"><img src="../files/app/sylum07.png"  title="l07" class="gallery-exercise" alt="exercise"></td>
+	            </tr>
+                <tr >
+                <th></th>
+                  <td> </td>
+		          <td class="img-2col"><img src="../files/app/rep5x2.png" class="gallery-exercise" alt="exercise"></td>
+                  <td class="img-2col"></td>
+	            </tr>
+		      </tbody>
+		    </table>
+		</div><!--/demo-html -->
+ </div>   
+            <p class="floatClear">&nbsp;</p>
+            <input type="button" onclick="printDiv('print3')" value="print exercise" />
+	</div>
+	</div><!-- /content -->
+<div data-role="footer" data-theme="a"  data-position="fixed"  class="white">
+		<a href="#start" ><img src="../images/icon_back_start_blue.png" alt="back"></a> &nbsp; &nbsp; &nbsp; &nbsp;   <button onclick="goBack()" ><img src="../files/app/icback.png" alt="back"></button> &nbsp; &nbsp;  
+</div><!-- /footer -->
+</div><!-- /page 3 -->
+
+
+<!-- page: 4 -->
+<div data-role="page" id="t4" data-theme="a">
+	<header  data-role="header4" class="" > 
+    <h3 class="white">lumbar</h3>
+		</header> <!-- /header -->
+	<div role="main" class="ui-content">
+    <div id="gallery4">
+    <div id="print4">
+<h2><strong>D4:</strong> Muscle spasm/ strain</h2>
+	<div data-html="true">
+		    <table data-role="table" id="exercise-table-4" data-mode="reflow" class="ui-responsive exercise-table">
+		      <thead>
+		        <tr>
+		          <th data-priority="1">&nbsp;</th>
+                  <th data-priority="2" >&nbsp;</th>
+                  <th data-priority="3">&nbsp;</th>
+                  <th data-priority="4">&nbsp;</th>
+		        </tr>
+		      </thead>
+		      <tbody>
+		        <tr class="blank-td">
+                <th>1</th>
+		          <td> Side bends</td>
+		          <td class="img-2col"><img src="../files/app/sylum06.png"  title="l06" class="gallery-exercise" alt="exercise"></td>
+                  <td class="img-2col"><img src="../files/app/sylum13.png"  title="l13" class="gallery-exercise" alt="exercise"></td>
+		        </tr>
+                <tr >
+                <th></th>
+                  <td> </td>
+		          <td class="img-2col"><img src="../files/app/sylum05.png"  title="l05" class="gallery-exercise" alt="exercise"></td>
+                  <td class="img-2col"><img src="../files/app/rep5x4.png" class="gallery-exercise" alt="exercise"></td>
+	            </tr>
+		        <tr class="blank-td">
+                <th>2</th>
+                  <td> Knee rolling side to side</td>
+		          <td class="img-2col"><img src="../files/app/sylum08.png"  title="l08" class="gallery-exercise" alt="exercise"></td>
+                  <td class="img-2col"><img src="../files/app/sylum07.png"  title="l07" class="gallery-exercise" alt="exercise"></td>
+	            </tr>
+                <tr >
+                <th></th>
+                  <td> </td>
+		          <td class="img-2col"><img src="../files/app/rep5x2.png" class="gallery-exercise" alt="exercise"></td>
+                  <td class="img-2col"></td>
+	            </tr>
+                <tr class="blank-td">
+                <th>3</th>
+		          <td> Place foot on opposite knee, push knee down and hold</td>
+		          <td class="img-2col"><img src="../files/app/sylum14.png"  title="l14" class="gallery-exercise" alt="exercise"></td>
+		          <td class="img-2col"><img src="../files/app/sylum15.png"  title="l15" class="gallery-exercise" alt="exercise"></td>
+	            </tr>
+                <tr >
+                <th></th>
+                  <td> </td>
+		          <td class="img-2col"><img src="../files/app/rep15x3.png" class="gallery-exercise" alt="exercise"></td>
+                  <td class="img-2col"></td>
+	            </tr>
+		      </tbody>
+		    </table>
+		</div><!--/demo-html -->
+ </div>   
+            <p class="floatClear">&nbsp;</p>
+            <input type="button" onclick="printDiv('print4')" value="print exercise" />
+	</div>
+	</div><!-- /content -->
+<div data-role="footer" data-theme="a"  data-position="fixed"  class="white">
+		<a href="#start" ><img src="../images/icon_back_start_blue.png" alt="back"></a> &nbsp; &nbsp; &nbsp; &nbsp;   <button onclick="goBack()" ><img src="../files/app/icback.png" alt="back"></button> &nbsp; &nbsp;  
+</div><!-- /footer -->
+</div><!-- /page 4 -->
+
+<!-- page: 5 -->
+<div data-role="page" id="t5" data-theme="a">
+	<header  data-role="" class="headergrey" >     <h4 class="greypale">Lumbar exercises</h4></header> <!-- /header -->
+	<div role="main" class="ui-content">
+    <div id="gallery5">
+    <div id="print5">
+<h2><strong>D5:</strong> Arthritis</h2>
+	<div data-html="true">
+		    <table data-role="table" id="exercise-table-5" data-mode="reflow" class="ui-responsive exercise-table">
+		      <thead>
+		        <tr>
+		          <th data-priority="1">&nbsp;</th>
+                  <th data-priority="2" >&nbsp;</th>
+                  <th data-priority="3">&nbsp;</th>
+                  <th data-priority="4">&nbsp;</th>
+		        </tr>
+		      </thead>
+		      <tbody>
+		        <tr >
+                <th>1</th>
+		          <td> Pelvic tilts</td>
+		          <td class="img-2col"><img src="../files/app/sylum02.png"  title="02" class="gallery-exercise" alt="exercise"></td>
+                  <td class="img-2col"><img src="../files/app/rep10x3.png" class="gallery-exercise" alt="exercise"></td>
+		        </tr>
+                <tr class="blank-td">
+                <th>2</th>
+                  <td> Knee rolling side to side</td>
+		          <td class="img-2col"><img src="../files/app/sylum08.png" title="l08" class="gallery-exercise" alt="exercise"></td>
+                  <td class="img-2col"><img src="../files/app/sylum07.png" title="l07" class="gallery-exercise" alt="exercise"></td>
+	            </tr>
+                <tr >
+                <th></th>
+                  <td> </td>
+		          <td class="img-2col"><img src="../files/app/rep5x2.png" class="gallery-exercise" alt="exercise"></td>
+                  <td class="img-2col"></td>
+	            </tr>
+                <tr class="blank-td">
+                <th>3</th>
+                  <td> Forward bending with seated trunk</td>
+		          <td class="img-2col"><img src="../files/app/sylum03.png" title="l03" class="gallery-exercise" alt="exercise"></td>
+                  <td class="img-2col"><img src="../files/app/sylum04.png" title="l04" class="gallery-exercise" alt="exercise"></td>
+	            </tr>
+                <tr >
+                <th></th>
+                  <td> </td>
+		          <td class="img-2col"><img src="../files/app/rep10x3.png" class="gallery-exercise" alt="exercise"></td>
+                  <td class="img-2col"></td>
+	            </tr>
+		      </tbody>
+		    </table>
+		</div><!--/demo-html -->
+    </div>   
+            <p class="floatClear">&nbsp;</p>
+            <input type="button" onclick="printDiv('print5')" value="print exercise" />
+	</div>
+	</div><!-- /content -->
+<div data-role="footer" data-theme="a"  data-position="fixed"  class="white">
+		<a href="#start" ><img src="../images/icon_back_start_blue.png" alt="back"></a> &nbsp; &nbsp; &nbsp; &nbsp;   <button onclick="goBack()" ><img src="../files/app/icback.png" alt="back"></button> &nbsp; &nbsp;  
+</div><!-- /footer -->
+</div><!-- /page 5 -->
+	
+	<!-- page: 6 -->
+<div data-role="page" id="t6" data-theme="a">
+	<header  data-role="header4" class="" > 
+    <h3 class="white">lumbar</h3>
+		</header> <!-- /header -->
+	<div role="main" class="ui-content">
+    <div id="gallery6">
+    <div id="print6">
+<h2><strong>D6:</strong> Myofascial tightness</h2>
+	<div data-html="true">
+		    <table data-role="table" id="exercise-table-6" data-mode="reflow" class="ui-responsive exercise-table">
+		      <thead>
+		        <tr>
+		          <th data-priority="1">&nbsp;</th>
+                  <th data-priority="2" >&nbsp;</th>
+                  <th data-priority="3">&nbsp;</th>
+                  <th data-priority="4">&nbsp;</th>
+		        </tr>
+		      </thead>
+		      <tbody>
+		        <tr >
+                <th>1</th>
+		          <td> Pelvic tilts</td>
+		          <td class="img-2col"><img src="../files/app/sylum02.png" title="02" class="gallery-exercise" alt="exercise"></td>
+                  <td class="img-2col"><img src="../files/app/rep10x3.png"  title="" class="gallery-exercise" alt="exercise"></td>
+		        </tr>
+                <tr class="blank-td">
+                <th>2</th>
+                  <td> Forward bending with seated trunk</td>
+		          <td class="img-2col"><img src="../files/app/sylum03.png"  title="l03" class="gallery-exercise" alt="exercise"></td>
+                  <td class="img-2col"><img src="../files/app/sylum04.png"  title="l04" class="gallery-exercise" alt="exercise"></td>
+	            </tr>
+                <tr >
+                <th></th>
+                  <td> </td>
+		          <td class="img-2col"><img src="../files/app/rep10x3.png" class="gallery-exercise" alt="exercise"></td>
+                  <td class="img-2col"></td>
+	            </tr>
+                <tr class="blank-td">
+                <th>3</th>
+		          <td> Side bends</td>
+		          <td class="img-2col"><img src="../files/app/sylum06.png"  title="l06" class="gallery-exercise" alt="exercise"></td>
+                  <td class="img-2col"><img src="../files/app/sylum13.png"  title="l13" class="gallery-exercise" alt="exercise"></td>
+		        </tr>
+                <tr >
+                <th></th>
+                  <td> </td>
+		          <td class="img-2col"><img src="../files/app/sylum05.png"  title="l05" class="gallery-exercise" alt="exercise"></td>
+                  <td class="img-2col"><img src="../files/app/rep5x4.png" class="gallery-exercise" alt="exercise"></td>
+	            </tr>
+		      </tbody>
+		    </table>
+		</div><!--/demo-html -->
+    </div>   
+            <p class="floatClear">&nbsp;</p>
+            <input type="button" onclick="printDiv('print6')" value="print exercise" />
+	</div>
+	</div><!-- /content -->
+<div data-role="footer" data-theme="a"  data-position="fixed"  class="white">
+		<a href="#start" ><img src="../images/icon_back_start_blue.png" alt="back"></a> &nbsp; &nbsp; &nbsp; &nbsp;   <button onclick="goBack()" ><img src="../files/app/icback.png" alt="back"></button> &nbsp; &nbsp;  
+</div><!-- /footer -->
+</div><!-- /page 6 -->
+	
+
+<!-- page: 7 -->
+<div data-role="page" id="t7" data-theme="a">
+	<header  data-role="header4" class="" > 
+    <h3 class="white">lumbar</h3>
+		</header> <!-- /header -->
+	<div role="main" class="ui-content">
+    <div id="gallery7">
+    <div id="print7">
+<h2><strong>D7:</strong> Fracture</h2>
+	<div data-html="true">
+		    <table data-role="table" id="exercise-table-7" data-mode="reflow" class="ui-responsive exercise-table">
+		      <thead>
+		        <tr>
+		          <th data-priority="1">&nbsp;</th>
+                  <th data-priority="2" >&nbsp;</th>
+                  <th data-priority="3">&nbsp;</th>
+                  <th data-priority="4">&nbsp;</th>
+		        </tr>
+		      </thead>
+		      <tbody>
+		        <tr >
+                <th>1</th>
+		          <td> Pelvic tilts for six weeks, then progress to knee rolling</td>
+		          <td class="img-2col"><img src="../files/app/sylum02.png"  title="l02" class="gallery-exercise" alt="exercise"></td>
+                  <td class="img-2col"><img src="../files/app/rep10x3.png" class="gallery-exercise" alt="exercise"></td>
+		        </tr>
+                <tr class="blank-td">
+                <th>2</th>
+                  <td> Knee rolling side to side</td>
+		          <td class="img-2col"><img src="../files/app/sylum08.png"  title="l08" class="gallery-exercise" alt="exercise"></td>
+                  <td class="img-2col"><img src="../files/app/sylum07.png"  title="l07" class="gallery-exercise" alt="exercise"></td>
+	            </tr>
+                <tr >
+                <th></th>
+                  <td> </td>
+		          <td class="img-2col"><img src="../files/app/rep5x2.png" class="gallery-exercise" alt="exercise"></td>
+                  <td class="img-2col"></td>
+	            </tr>
+                <tr class="blank-td">
+                <th>3</th>
+		          <td > Bridging</td>
+		          <td class="img-2col"><img src="../files/app/sylum09.png"  title="l09" class="gallery-exercise" alt="exercise"></td>
+                  <td class="img-2col"><img src="../files/app/sylum10.png"  title="l10" class="gallery-exercise" alt="exercise"></td>
+		        </tr>
+				  <tr class="blank-td">
+                <th></th>
+		          <td > </td>
+		          <td class="img-2col"><img src="../files/app/rep10x3.png" class="gallery-exercise" alt="exercise"></td>
+                  <td class="img-2col"></td>
+		        </tr>
+		      </tbody>
+		    </table>
+		</div><!--/demo-html -->
+    </div>   
+            <p class="floatClear">&nbsp;</p>
+            <input type="button" onclick="printDiv('print7')" value="print exercise" />
+	</div>
+	</div><!-- /content -->
+<div data-role="footer" data-theme="a"  data-position="fixed"  class="white">
+		<a href="#start" ><img src="../images/icon_back_start_blue.png" alt="back"></a> &nbsp; &nbsp; &nbsp; &nbsp;   <button onclick="goBack()" ><img src="../files/app/icback.png" alt="back"></button> &nbsp; &nbsp;  
+</div><!-- /footer -->
+</div><!-- /page 7 -->
+
+
+	  
+<!-- page: soap4 -->
+<div data-role="page" id="soap4" data-theme="f" class="pale-bkgnd-y">
+<!-- panel -->
+    	
+		<header  data-role="" class="headergreen" > 
+		<h4 class="green">Lumbar Plan notes</h4>
+	</header> <!-- /header -->	
+	<div role="main" class="ui-content">
+	<p class="floatClear mini">&nbsp;</p>
+		<h2>my <span class="big-form-black">P</span>lan notes <img src="../files/app/sym_pla_blank_ic.png" class=""  alt="symbol plan" /></h2>
+		<div class="centrediv">
+    <p> <span class="mini">(from my own observations of my patient)</span></p>
+<div id="container2">
+            <ul id="theListlum4" contenteditable="true">
+              <li>My plan notes are...</li>
+            </ul>
+          <p><img src="../main/images/check-black.png" class=""  alt="symbol analysis" /> <span class="big-form-black"><a href="javascript:void();" id="saveAll2">Save</a></span> &nbsp; | &nbsp; <img src="../main/images/delete-black.png" class=""  alt="symbol analysis" /> <span class="big-form-black"><a href="javascript:void();" id="clearAll2">Clear</a></span></p>
+        </div><!-- /container --> 
+		  <p><span class="mini">(use info button below for guidance)</span></p>	
+</div>
+	</div>
+	<!-- /content -->
+<div data-role="footer" data-type="horizontal" data-position="fixed" class="white">
+		<a href="lumbar-exercises.html" rel="external"><img src="../images/icon_back_start_blue.png" alt="back"></a> &nbsp; &nbsp; <button onclick="goBack()" ><img src="../files/app/icback.png" alt="back"></button> &nbsp; &nbsp;  
+</div><!-- /footer --> 
+</div><!-- /page soap4 -->
+<!--	<script src="../main/js/soap-notes4.js"></script>-->
+<script type="text/javascript">
+	$(document).ready(function() {
+		var theListlum4 = document.getElementById('theListlum4');
+		$("#saveAll").click(function(e) {
+			e.preventDefault();
+			localStorage.setItem('todoListlum4', theListlum4.innerHTML);
+			
+		});
+		$("#clearAll").click(function(e) {
+			e.preventDefault();
+//			localStorage.clear();
+			window.localStorage.removeItem('todoListlum4', theListlum4.innerHTML);
+			location.reload();
+		});
+		
+		loadToDo();
+		
+		function loadToDo() {
+		  if ( localStorage.getItem('todoListlum4') ) {
+			theListlum4.innerHTML = localStorage.getItem('todoListlum4'); 
+			
+		  }
+		}
+	});
+</script>	
+  </body>
+</html>

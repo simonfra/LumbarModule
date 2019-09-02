@@ -1,0 +1,539 @@
+<!DOCTYPE html> 
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Lumbar assessments</title>
+<!--------add stylesheets normal------------------------------->
+	<link rel="stylesheet" href="../main/css/normalize.css">
+	<link rel="stylesheet" href="../main/css/styles.css">
+    <link rel="stylesheet" href="../main/css/responsive-min.css">
+	<link rel="stylesheet" href="../main/css/style-developing.css">
+    <link rel="stylesheet" href="../main/css/jquery.mobile-1.4.5.min.css">
+	<link rel="shortcut icon" href="../images/favicon.ico">
+    <link rel="stylesheet" href="../main/css/font.css">
+	<script src="../main/js/jquery.js"></script>
+	<script src="../main/js/jquery.mobile-1.4.5.min.js"></script>
+	<script id="popup-arrow-script">
+	$.mobile.document.on( "click", "#open-popupArrow", function( evt ) {
+		$( "#popupArrow" ).popup( "open", { x: evt.pageX, y: evt.pageY } );
+		evt.preventDefault();
+	});
+	</script>    
+	<script>
+	$( document ).on( "pagecreate", function() {
+    $( ".popup" ).on({
+        popupbeforeposition: function() {
+            var maxHeight = $( window ).height() - 60 + "px";
+            $( ".popup img" ).css( "max-height", maxHeight );
+        }
+    });
+});
+</script>
+<script>
+function goBack() {
+    window.history.back();
+}
+</script>
+<script>
+function printDiv(divName) {
+     var printContents = document.getElementById(divName).innerHTML;
+     var originalContents = document.body.innerHTML;
+     document.body.innerHTML = printContents;
+     window.print();
+     document.body.innerHTML = originalContents;
+}
+</script>
+<script>
+$(document).ready(function(){
+    $("#h1").click(function(){
+        $("#dg1").fadeIn("slow");
+    });
+	$("#h2").click(function(){
+        $("#dg2").fadeIn("slow");
+    });
+	$("#h3").click(function(){
+        $("#dg3").fadeIn("slow");
+    });
+	$("#h4").click(function(){
+        $("#dg4").fadeIn("slow");
+    });
+	$("#h5").click(function(){
+        $("#dg5").fadeIn("slow");
+    });
+
+	$("#h6").click(function(){
+        $("#dg6").fadeIn("slow");
+    });
+
+	$("#h7").click(function(){
+        $("#dg7").fadeIn("slow");
+    });
+
+	$("#h8").click(function(){
+        $("#dg8").fadeIn("slow");
+    });
+
+	$("#h9").click(function(){
+        $("#dg9").fadeIn("slow");
+    });
+
+	$("#h10").click(function(){
+        $("#dg10").fadeIn("slow");
+    });
+
+	$("#h11").click(function(){
+        $("#dg11").fadeIn("slow");
+    });
+
+	$("#h12").click(function(){
+        $("#dg12").fadeIn("slow");
+    });
+
+});
+</script>
+<script id="panel-init">
+		$(function() {
+			$( "body>[data-role='panel']" ).panel();
+		});
+	</script>
+<script>
+$(document).ready(function(){
+    $("button").click(function(){
+        $("#proceed").fadeIn("slow");
+    });
+});
+</script>
+</head>
+<body class="">
+<!-- Start of first page: #start -->
+	<div data-role="page" id="start" data-theme="f" class="focus2">
+<!--<main>-->
+	<main class="index-blend">
+		<div class="header"><h4><img src="../images/icon-hand20g.png" alt="practice" title="practice" /> Lumbar S <img src="../images/dot_grey.png" alt="dot" /> O <img src="../images/dot_grey.png" alt="dot" /> A <img src="../images/dot_grey.png" alt="dot" /> P</h4></div>
+	<header data-role="header4" class="header6"> 
+    <h3 class="white-purple"></h3>
+   </header> 
+<div class="icon-stage">
+<ul class="flex-container-boxes nowrap tooltipnav">
+  <li class="flex-item"><a href="../learning/lumbar-index.html" rel="external" data-info="All"><img src="../images/icon_back_start.png" alt="back"></a></li>
+  <li class="flex-item-blue "><a href="lumbar-patient-form.html"  rel="external" data-info="Subjective notes"> &nbsp; </a></li>
+  <li class="flex-item-blue2  active-flex"><a href="lumbar-assessment.html"  rel="external" data-info="Objective/ assessment"> &nbsp; </a></li>
+  <li class="flex-item-green " ><a href="lumbar-treatment.html"  rel="external" data-info="Analysis/ treatment"> &nbsp; </a></li>
+  <li class="flex-item-green2 "><a href="lumbar-exercises.html"  rel="external" data-info="Plan/ review">  &nbsp; </a></li>
+</ul>			
+</div><!-- /icon-stage -->
+	<div role="main" class="ui-content focus1" data-theme="a" >
+		
+		<h2><span class="big-form-black">O</span>bjective assessment <a href="#soap2"><img src="../files/app/sym_obj_blank_ic.png" alt="Objective notes" title="Objective notes" /></a></h2>
+<ul class="flex-container-select w3-animate-zoom">
+	<li class="flex-item-box-gold"><img src="../files/app/symbol_health_scratch_neck.png"  class="item2"  alt="cough" title="cough" /><br /><span class="black-text">HIV</span><br /></li>
+<li class="flex-item-box-gold"><img src="../files/app/symbol_health_heart.png"  alt="dizziness" title="dizziness"><span class="black-text">nocturnal pain/ drop attacks/</span><br /></li>
+<li class="flex-item-box-gold"><img src="../files/app/symbol_health_cough.png"  alt="cough" title="cough"><span class="black-text">speaking/ swallowing problem<br /><br /></span></li>	
+<li class="flex-item-box-gold"><img src="../files/app/symbol_health_dizzy.png"  alt="dizziness" title="dizziness"><br /><span class="black-text">dizziness</span><br /></li>
+<li class="flex-item-box-gold"><img src="../files/app/symbol_health_swollen_ankle.png"  alt="cough" title="cough"><span class="black-text">cancer/ inflammatory arthritis</span><br /></li>
+<li class="flex-item-box-gold"><img src="../files/app/symbol_health_lungs.png"  alt="dizziness" title="dizziness"><br /><span class="black-text">TB</span><br /></li>
+<li class="flex-item-box-gold"><img src="../files/app/symbol_health_starved.png"  alt="cough" title="cough"><br /><span class="black-text">weight loss/ fevers</span><br /></li>
+<li class="flex-item-box-gold"><img src="../files/app/symbol_health_young2.png"  alt="dizziness" title="dizziness"><br /><span class="black-text">less than 20/ more than 55</span><br /></li>
+<li class="flex-item-box-gold"><img src="../files/app/symbol_health_double_vision.png"  alt="cough" title="cough"><br /><span class="black-text">double vision</span><br /></li>
+<li class="flex-item-box-gold"><img src="../files/app/symbol_health_vas_extreme.png"  alt="cough" title="cough"><br /><span class="black-text">severe pain</span><br /></li>
+<li class="flex-item-box-gold"><img src="../files/app/symbol_health_backpain.png"  alt="cough" title="cough"><br /><span class="black-text">spinal cord compression</span><br /></li>
+<li class="flex-item-box-gold"><img src="../files/app/symbol_health_vertebrae_pain.png"  alt="cough" title="cough"><br /><span class="black-text">significant vertebral tenderness</span><br /></li>
+<li class="flex-item-box-gold"><img src="../files/app/symbol_health_hospital.png"  alt="cough" title="cough"><br /><span class="black-text">neck trauma/ surgery</span><br /></li>
+<li class="flex-item-box-gold"><img src="../files/app/symbol_health_machete.png"  alt="cough" title="cough"><br /><span class="black-text">preceding trauma or neck surgery</span><br /></li>	
+		</ul>
+
+<p>Please seek medical help if any of the above apply or else confirm that you have checked that none do. <button id="show" data-inline="true">I confirm</button>
+    <span id="proceed" style="display:none;"> <a href="#a-1"><img src="../main/images/check-black.png" id="icon-vas" alt=""/> proceed</a> &nbsp; <img src="../images/icon_blue_forward.png"  alt="proceed check" title="proceed" /></span></p>
+    <div data-role="collapsible" data-collapsed-icon="gear" data-expanded-icon="delete" class="centre-text " data-theme="f">
+        <h4><span class="mini"><img src="../images/icon_trans.png" alt="translate"></span></h4>
+   <span class="mini">&nbsp; &nbsp; &nbsp; Health check</span>  Before you begin, have you experienced any of the following? If yes, seek doctor as soon as possible. 
+1: Night sweats?
+2: Recent fever?
+3: Change in bladder/bowel habits, more specifically urine retention/faecal incontinence?
+4: Unexplained weight loss?
+5: Cough more than 3 weeks duration +\- blood in sputum?
+6: Pain down both legs?
+7: Poor controlled leg movement?
+8: Loss of feeling down both legs or around buttocks or inner surface of thighs?
+	</div>        
+	</div><!-- /content -->
+<div data-role="footer" data-type="horizontal" data-position="fixed" class="white">
+		<a href="../learning/lumbar-index.html" rel="external"><img src="../images/icon_back_start_blue.png" alt="back" /></a> &nbsp; &nbsp; <button onclick="goBack()" ><img src="../images/icon_back_a.png" alt="back" /></button> &nbsp; &nbsp;  &nbsp; &nbsp; 
+				  </div><!-- /footer -->  
+
+		</main>
+</div><!-- /page start -->
+
+	<!-----------  start panel ------------->
+<div data-role="panel" id="leftpanel1" data-position="left" data-display="reveal" data-theme="a">
+<div class="blue-back">
+        <h3> Objective Diagnosis: </h3>
+        </div>
+        <p> please <strong>make a note of your diagnosis number and name</strong> that appears here before clicking the 'next' button</p>
+        <p class="floatClear">&nbsp;</p>
+	<!-- 1 -->
+
+ <!-- 2 -->
+
+    <!-- 3 -->
+
+    <!-- 4 -->
+
+    <!-- 5 -->
+
+    <!-- 6 -->
+
+    <!-- 7 -->
+
+    <!-- 8 -->
+
+    <!-- 9 -->
+
+    <!-- 10 -->
+
+    <!-- 11 -->
+
+    <!-- 12 -->
+
+	</div><!-- /leftpanel1 -->
+
+<!--  page: 1 -->
+<div data-role="page" id="a-1" data-theme="a" class="focus2">
+	<div class="header blue"><h4 class="blue"> Lumbar objective analysis</h4></div>
+
+	<div data-role="content" data-theme="a">
+			<p class="floatClearPad"> Has there been a recent accident, fall or trauma?</p><img src="../files/app/luma01a.jpg"  class="floatLeft" alt="">
+			<a href="#a-2"  title="next"><img src="../files/app/luma01b.jpg" class="floatLeftHalf  flex-item-start" alt=""></a>
+			<a href="#a-16"><img src="../files/app/luma01c.jpg" class="floatLeftHalf  flex-item-start" alt=""></a>
+	</div>
+<div data-role="footer" data-theme="a" class="white"  data-position="fixed">
+		<a href="#start" rel="nofollow"><img src="../images/icon_back_start_blue.png" alt="back"></a> &nbsp; &nbsp;   <button onclick="goBack()" ><img src="../images/icon_back_a.png" alt="back"></button> &nbsp; &nbsp;    
+</div><!-- /footer -->
+</div><!-- /page 1 -->
+
+<!-- page: 2 -->
+<div data-role="page" id="a-2" data-theme="a" class="focus2">
+	<div class="header blue"><h4 class="blue"> Lumbar objective analysis</h4></div>
+	<div data-role="content" data-theme="a">	
+			<p class="floatClearPad"> Has there been a sudden onset of low back pain following an action of lifting or twisting?</p>
+			<img src="../files/app/luma02a.jpg" class="floatLeft" alt="">
+			<a href="#a-11"  title="next"><img src="../files/app/luma02b.jpg" class="floatLeftHalf  flex-item-start" alt=""></a>
+			<a href="#a-3"><img src="../files/app/luma02c.jpg" class="floatLeftHalf  flex-item-start" alt=""></a>
+	</div>
+<div data-role="footer" data-theme="a" class="white"  data-position="fixed">
+		<a href="#start" rel="nofollow"><img src="../images/icon_back_start_blue.png" alt="back"></a> &nbsp; &nbsp;   <button onclick="goBack()" ><img src="../images/icon_back_a.png" alt="back"></button> &nbsp; &nbsp; 
+</div><!-- /footer -->
+</div><!-- /page 2 -->
+
+<!-- page: 3 -->
+<div data-role="page" id="a-3" data-theme="a" class="focus2">
+	<div class="header blue"><h4 class="blue"> Lumbar objective analysis</h4></div>
+	<div data-role="content" data-theme="a">	
+			<p class="floatClearPad"> Bending forwards, is it painful?</p>
+			<img src="../files/app/luma03a.jpg" class="floatLeft" alt="">
+			<a href="#a-4"  title="next"><img src="../files/app/luma03b.jpg" class="floatLeftHalf  flex-item-start" alt=""></a>
+			<a href="#a-6"><img src="../files/app/luma03c.jpg" class="floatLeftHalf  flex-item-start" alt=""></a>
+	</div>
+<div data-role="footer" data-theme="a" class="white"  data-position="fixed">
+		<a href="#start" rel="nofollow"><img src="../images/icon_back_start_blue.png" alt="back"></a> &nbsp; &nbsp;   <button onclick="goBack()" ><img src="../images/icon_back_a.png" alt="back"></button> &nbsp; &nbsp; 
+</div><!-- /footer -->
+</div><!-- /page 3 -->
+
+<!-- page: 4 -->
+<div data-role="page" id="a-4" data-theme="a" class="focus2">
+	<div class="header blue"><h4 class="blue"> Lumbar objective analysis</h4></div>
+	<div data-role="content" data-theme="a">
+			<p class="floatClearPad"> Bending backwards, is it
+painful?</p>
+			<img src="../files/app/luma04a.jpg" class="floatLeft" alt="">
+			<a href="#a-5"  title="next"><img src="../files/app/luma04b.jpg" class="floatLeftHalf  flex-item-start" alt=""></a>
+			<a href="#a-11"><img src="../files/app/luma04c.jpg" class="floatLeftHalf  flex-item-start" alt=""></a>
+	</div>
+<div data-role="footer" data-theme="a" class="white"  data-position="fixed">
+		<a href="#start" rel="nofollow"><img src="../images/icon_back_start_blue.png" alt="back"></a> &nbsp; &nbsp;   <button onclick="goBack()" ><img src="../images/icon_back_a.png" alt="back"></button> &nbsp; &nbsp; 
+</div><!-- /footer -->
+</div><!-- /page 4 -->
+
+<!-- page: 5 -->
+<div data-role="page" id="a-5" data-theme="a" class="focus2">
+	<div class="header blue"><h4 class="blue"> Lumbar objective analysis</h4></div>
+	<div data-role="content" data-theme="a">
+			<p class="floatClearPad"> Bending to the right and left, is it painful?</p>
+			<img src="../files/app/luma05a.jpg" class="floatLeft" alt="">
+			<a href="#a-11" title="next"><img src="../files/app/luma05b.jpg" class="floatLeftHalf  flex-item-start" alt=""></a>
+			<a href="#a-14"><img src="../files/app/luma05c.jpg" class="floatLeftHalf  flex-item-start" alt=""></a>
+	</div>
+<div data-role="footer" data-theme="a" class="white"  data-position="fixed">
+		<a href="#start" rel="nofollow"><img src="../images/icon_back_start_blue.png" alt="back"></a> &nbsp; &nbsp;   <button onclick="goBack()" ><img src="../images/icon_back_a.png" alt="back"></button> &nbsp; &nbsp; 
+</div><!-- /footer -->
+</div><!-- /page 5 -->
+
+<!-- page: 6 -->
+<div data-role="page" id="a-6" data-theme="a" class="focus2">
+	<div class="header blue"><h4 class="blue"> Lumbar objective analysis</h4></div>
+	<div data-role="content" data-theme="a">
+			<p class="floatClearPad"> Is the patient standing with a lateral pelvic shift?</p>
+			<img src="../files/app/luma06a.jpg" class="floatLeft" alt="">
+			<a href="#a-14" title="next"><img src="../files/app/luma06b.jpg" class="floatLeftHalf  flex-item-start" alt=""></a>
+			<a href="#a-7"><img src="../files/app/luma06c.jpg" class="floatLeftHalf  flex-item-start" alt=""></a>
+	</div>
+<div data-role="footer" data-theme="a" class="white"  data-position="fixed">
+		<a href="#start" rel="nofollow"><img src="../images/icon_back_start_blue.png" alt="back"></a> &nbsp; &nbsp;   <button onclick="goBack()" ><img src="../images/icon_back_a.png" alt="back"></button> &nbsp; &nbsp;  
+</div><!-- /footer -->
+</div><!-- /page 6 -->
+
+<!-- page: 7 -->
+<div data-role="page" id="a-7" data-theme="a" class="focus2">
+	<div class="header blue"><h4 class="blue"> Lumbar objective analysis</h4></div>
+	<div data-role="content" data-theme="a">	
+			<p class="floatClearPad"> Palpate Lumbar segments, is it painful?</p>
+			<img src="../files/app/luma07a.jpg" class="floatLeft" alt="">
+			<a href="#a-17"  title="next"><img src="../files/app/luma07b.jpg" class="floatLeftHalf  flex-item-start" alt=""></a>
+			<a href="#a-8"><img src="../files/app/luma07c.jpg" class="floatLeftHalf  flex-item-start" alt=""></a>
+	</div>
+<div data-role="footer" data-theme="a" class="white"  data-position="fixed">
+		<a href="#start" rel="nofollow"><img src="../images/icon_back_start_blue.png" alt="back"></a> &nbsp; &nbsp;   <button onclick="goBack()" ><img src="../images/icon_back_a.png" alt="back"></button> &nbsp; &nbsp; 
+</div><!-- /footer -->
+</div><!-- /page 7 -->
+
+<!-- page: 8 -->
+<div data-role="page" id="a-8" data-theme="a" class="focus2">
+	<div class="header blue"><h4 class="blue"> Lumbar objective analysis</h4></div>
+	<div data-role="content" data-theme="a">	
+			<p class="floatClearPad"> Sitting slouched, straighten patient’s leg, lift toes, and bend head forward. Is it painful or is altered sensation felt? (slump test)</p>
+			<img src="../files/app/luma08a.jpg" class="floatLeft" alt="">
+			<a href="#a-14"  title="next"><img src="../files/app/luma08b.jpg" class="floatLeftHalf  flex-item-start" alt=""></a>
+			<a href="#a-9"><img src="../files/app/luma08c.jpg" class="floatLeftHalf  flex-item-start" alt=""></a>
+	</div>
+<div data-role="footer" data-theme="a" class="white"  data-position="fixed">
+		<a href="#start" rel="nofollow"><img src="../images/icon_back_start_blue.png" alt="back"></a> &nbsp; &nbsp;   <button onclick="goBack()" ><img src="../images/icon_back_a.png" alt="back"></button> &nbsp; &nbsp; 
+</div><!-- /footer -->
+</div><!-- /page 8 -->
+
+<!-- page: 9 -->
+<div data-role="page" id="a-9" data-theme="a" class="focus2">
+	<div class="header blue"><h4 class="blue"> Lumbar objective analysis</h4></div>
+	<div data-role="content" data-theme="a">
+			<p class="floatClearPad"> When therapist lifts painful leg straight up into the air, is it painful or is altered sensation felt? Patient may lift head to test further.</p>
+			<img src="../files/app/luma09a.jpg" class="floatLeft" alt="">
+			<a href="#a-14" title="next"><img src="../files/app/luma09b.jpg" class="floatLeftHalf  flex-item-start" alt=""></a>
+			<a href="#a-10"><img src="../files/app/luma09c.jpg" class="floatLeftHalf  flex-item-start" alt=""></a>
+	</div>
+<div data-role="footer" data-theme="a" class="white"  data-position="fixed">
+		<a href="#start" rel="nofollow"><img src="../images/icon_back_start_blue.png" alt="back"></a> &nbsp; &nbsp;   <button onclick="goBack()" ><img src="../images/icon_back_a.png" alt="back"></button> &nbsp; &nbsp; 
+</div><!-- /footer -->
+</div><!-- /page 9 -->
+
+<!-- page: 10 -->
+<div data-role="page" id="a-10" data-theme="a" class="focus2">
+	<div class="header blue"><h4 class="blue"> Lumbar objective analysis</h4></div>
+	<div data-role="content" data-theme="a">	
+			<p class="floatClearPad"> Test reflexes, myotomes and dermatomes. Are some positive?</p>
+			<img src="../files/app/luma10a.jpg" class="floatLeft" alt="">
+			<a href="#a-14"  title="next"><img src="../files/app/luma10b.jpg" class="floatLeftHalf  flex-item-start" alt=""></a>
+			<a href="#" id="h1"><img src="../files/app/luma10c.jpg" class="floatLeftHalf  flex-item-start" alt=""></a>
+        <div style="display:none; float:right;" id="dg1"><a href="lumbar-treatment.html#t1" rel="external"  class="ui-btn ui-shadow ui-corner-all ui-btn-inline ui-mini green-back"><img src="../images/arrow-r-white.png" alt="next"> Disc pain</a><br /></div>
+	</div>
+<div data-role="footer" data-theme="a" class="white"  data-position="fixed">
+		<a href="#start" rel="nofollow"><img src="../images/icon_back_start_blue.png" alt="back"></a> &nbsp; &nbsp;   <button onclick="goBack()" ><img src="../images/icon_back_a.png" alt="back"></button> &nbsp; &nbsp; 
+</div><!-- /footer -->
+</div><!-- /page 10 -->
+
+<!-- page: 11 -->
+<div data-role="page" id="a-11" data-theme="a" class="focus2">
+	<div class="header blue"><h4 class="blue"> Lumbar objective analysis</h4></div>
+	<div data-role="content" data-theme="a">	
+			<p class="floatClearPad"><span class="k">11</span> Palpate Lx segments, is it painful and is stiffness felt?</p>
+			<img src="../files/app/luma11a.jpg" class="floatLeft" alt="">
+			<a href="#a-15"  title="next"><img src="../files/app/luma11b.jpg"  class="floatLeftHalf  flex-item-start" alt=""></a>
+			<a href="#a-12"><img src="../files/app/luma11c.jpg" class="floatLeftHalf  flex-item-start" alt=""></a>
+	</div>
+<div data-role="footer" data-theme="a" class="white"  data-position="fixed">
+		<a href="#start" rel="nofollow"><img src="../images/icon_back_start_blue.png" alt="back"></a> &nbsp; &nbsp;   <button onclick="goBack()" ><img src="../images/icon_back_a.png" alt="back"></button> &nbsp; &nbsp; 
+</div><!-- /footer -->
+</div><!-- /page 11 -->
+
+<!-- page: 12 -->
+<div data-role="page" id="a-12" data-theme="a" class="focus2">
+	<div class="header blue"><h4 class="blue"> Lumbar objective analysis</h4></div>
+	<div data-role="content" data-theme="a">
+			<p class="floatClearPad"> Is patient over 50yrs old?</p>
+			<img src="../files/app/luma12a.jpg" class="floatLeft" alt="">
+			<a href="#" id="h3"><img src="../files/app/luma12b.jpg"  class="floatLeftHalf  flex-item-start" alt=""></a>
+        <a href="#a-13"><img src="../files/app/luma12c.jpg" class="floatLeftHalf  flex-item-start" alt=""></a>
+        <div style="display:none; float:right;" id="dg3"><a href="lumbar-treatment.html#t3" rel="external"  class="ui-btn ui-shadow ui-corner-all ui-btn-inline ui-mini green-back"><img src="../images/arrow-r-white.png" alt="next"> Facet joint pain</a><br /></div>
+	</div>
+<div data-role="footer" data-theme="a" class="white"  data-position="fixed">
+		<a href="#start" rel="nofollow"><img src="../images/icon_back_start_blue.png" alt="back"></a> &nbsp; &nbsp;   <button onclick="goBack()" ><img src="../images/icon_back_a.png" alt="back"></button> &nbsp; &nbsp; 
+</div><!-- /footer -->
+</div><!-- /page 12 -->
+
+<!-- page: 13 -->
+<div data-role="page" id="a-13" data-theme="a" class="focus2">
+	<div class="header blue"><h4 class="blue"> Lumbar objective analysis</h4></div>
+	<div data-role="content" data-theme="a">	
+			<p class="floatClearPad"> When walking up hill or bent forward, is it less painful?</p>
+			<img src="../files/app/luma13a.jpg" class="floatLeft" alt="">
+			<a href="#" id="h2" ><img src="../files/app/luma13b.jpg" class="floatLeftHalf  flex-item-start" alt=""></a>
+			<a href="#" id="h5"><img src="../files/app/luma13c.jpg" class="floatLeftHalf  flex-item-start" alt=""></a>
+        <div style="display:none; float:right;" id="dg2"><a href="lumbar-treatment.html#t2" rel="external"  class="ui-btn ui-shadow ui-corner-all ui-btn-inline ui-mini green-back"><img src="../images/arrow-r-white.png" alt="next"> treatment</a><br />Lumbar stenosis</div>
+        <div style="display:none; float:right;" id="dg5"><a href="lumbar-treatment.html#t5" rel="external"  class="ui-btn ui-shadow ui-corner-all ui-btn-inline ui-mini green-back"><img src="../images/arrow-r-white.png" alt="next"> treatment</a><br />Osteoarthritis</div>
+	</div>
+<div data-role="footer" data-theme="a" class="white"  data-position="fixed">
+		<a href="#start" rel="nofollow"><img src="../images/icon_back_start_blue.png" alt="back"></a> &nbsp; &nbsp;   <button onclick="goBack()" ><img src="../images/icon_back_a.png" alt="back"></button> &nbsp; &nbsp; 
+</div><!-- /footer -->
+</div><!-- /page 13 -->
+
+<!-- page: 14 -->
+<div data-role="page" id="a-14" data-theme="a" class="focus2">
+	<div class="header blue"><h4 class="blue"> Lumbar objective analysis</h4></div>
+	<div data-role="content" data-theme="a">
+			<p class="floatClearPad"> Is increased muscle tension evident in muscles along the back?</p>
+			<img src="../files/app/luma14a.jpg" class="floatLeft" alt="">
+			<a href="#a-17"   title="next"><img src="../files/app/luma14b.jpg" class="floatLeftHalf  flex-item-start" alt=""></a>
+			<a href="#a-15"><img src="../files/app/luma14c.jpg" class="floatLeftHalf  flex-item-start" alt=""></a>
+	</div>
+<div data-role="footer" data-theme="a" class="white"  data-position="fixed">
+		<a href="#start" rel="nofollow"><img src="../images/icon_back_start_blue.png" alt="back"></a> &nbsp; &nbsp;   <button onclick="goBack()" ><img src="../images/icon_back_a.png" alt="back"></button> &nbsp; &nbsp; 
+</div><!-- /footer -->
+</div><!-- /page 14 -->
+
+<!-- page: 15 -->
+<div data-role="page" id="a-15" data-theme="a" class="focus2">
+	<div class="header blue"><h4 class="blue"> Lumbar objective analysis</h4></div>
+	<div data-role="content" data-theme="a">	
+			<p class="floatClearPad"> Feel the muscle bellies along the lower spine and above the pelvis is it painful to touch?</p>
+			<img src="../files/app/luma15a.jpg" class="floatLeft" alt="">
+			<a href="#a-17"  title="next"><img src="../files/app/luma15b.jpg" class="floatLeftHalf  flex-item-start" alt=""></a>
+			<a href="#" id="h4"><img src="../files/app/luma15c.jpg" class="floatLeftHalf  flex-item-start" alt=""></a>
+        <div style="display:none; float:right;" id="dg4"><a href="lumbar-treatment.html#t4" rel="external"  class="ui-btn ui-shadow ui-corner-all ui-btn-inline ui-mini green-back"><img src="../images/arrow-r-white.png" alt="next"> Muscle spasm</a><br /></div>
+	</div>
+<div data-role="footer" data-theme="a" class="white"  data-position="fixed">
+		<a href="#start" rel="nofollow"><img src="../images/icon_back_start_blue.png" alt="back"></a> &nbsp; &nbsp;   <button onclick="goBack()" ><img src="../images/icon_back_a.png" alt="back"></button> &nbsp; &nbsp; 
+</div><!-- /footer -->
+</div><!-- /page 15 -->
+
+<!-- page: 16 -->
+<div data-role="page" id="a-16" data-theme="a" class="focus2">
+	<div class="header blue"><h4 class="blue"> Lumbar objective analysis</h4></div>
+	<div data-role="content" data-theme="a">	
+			<p class="floatClearPad"> Is the lumbar segment painful to tap locally?</p>
+			<img src="../files/app/luma16a.jpg" class="floatLeft" alt="">
+			<a href="#a-3"  title="next"><img src="../files/app/luma16b.jpg" class="floatLeftHalf  flex-item-start" alt=""></a>
+			<a href="#" id="h7"><img src="../files/app/luma16c.jpg" class="floatLeftHalf  flex-item-start" alt=""></a>
+        <div style="display:none; float:right;" id="dg7"><a href="../learning/spinal-index.html" rel="external"  class="ui-btn ui-shadow ui-corner-all ui-btn-inline ui-mini green-back"><img src="../images/arrow-r-white.png" alt="next"> Fracture</a><br /> proceed to Spinal Cord Injury</div>
+	</div>
+<div data-role="footer" data-theme="a" class="white" data-position="fixed">
+		<a href="#start" rel="nofollow"><img src="../images/icon_back_start_blue.png" alt="back"></a> &nbsp; &nbsp;   <button onclick="goBack()" ><img src="../images/icon_back_a.png" alt="back"></button> &nbsp; &nbsp; 
+</div><!-- /footer -->
+</div><!-- /page 16 -->
+
+<!-- page: 17 -->
+<div data-role="page" id="a-17" data-theme="a" class="focus2">
+	<div class="header blue"><h4 class="blue"> Lumbar objective analysis</h4></div>
+	<div data-role="content" data-theme="a">	
+			<p class="floatClearPad"> Pick up skin, and roll it between fingers. Does it feel painful and tight?</p>
+			<img src="../files/app/luma17a.jpg" class="floatLeft" alt="">
+			<a href="#"   title="next"><img src="../files/app/luma17b.jpg" class="floatLeftHalf  flex-item-start" alt=""></a>
+			<a href="#" id="h6"><img src="../files/app/luma17c.jpg" class="floatLeftHalf  flex-item-start" alt=""></a>
+<!--        <div style="display:none; float:right;" id="dg6"><a href="#leftpanel1"  class="ui-btn ui-shadow ui-corner-all ui-btn-inline ui-mini green-back">confirm</a></div>-->
+        <div style="display:none; float:right;" id="dg6"><a href="lumbar-treatment.html#t6" rel="external"  class="ui-btn ui-shadow ui-corner-all ui-btn-inline ui-mini green-back"><img src="../images/arrow-r-white.png" alt="next"> Myofascial tightness</a><br /></div>
+	</div>
+<div data-role="footer" data-theme="a" class="white"  data-position="fixed">
+		<a href="#start" rel="nofollow"><img src="../images/icon_back_start_blue.png" alt="back"></a> &nbsp; &nbsp;   <button onclick="goBack()" ><img src="../images/icon_back_a.png" alt="back"></button> &nbsp; &nbsp; 
+</div><!-- /footer -->
+</div><!-- /page 17 -->
+
+
+
+<!-- page: soap2 -->
+	<div data-role="page" id="soap2" data-theme="f" class="pale-bkgnd-c">
+		<!-- panel -->
+<div data-role="panel" data-position="right" data-theme="b"  data-display="overlay" id="popupObjective" class="panel">
+    <p><strong>Objective</strong>
+    notes
+<a href="#popupNestedObjective" data-rel="popup" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-icon-plus ui-btn-icon-left ui-btn-b" data-transition="pop"><img src="../images/edit-gold.png" alt="alert" class=""></a>
+</p>
+    <p class="floatClear"><hr /></p>
+        <div data-role="collapsible" id="popupNestedObjective" data-inset="false" data-theme="b" data-content-theme="a" data-collapsed-icon="arrow-r" data-expanded-icon="arrow-d">
+        <h2>Things to observe:</h2>
+            <p>Here, we outline the objective results of your assessment, the progress towards functional goals and any treatments performed. Include details of any interventions, as well as frequency, duration and equipment used. The therapist should indicate changes in the patient's status, as well as communication with colleagues, family or carers.</p>
+            <h4>Try to avoid:</h4>
+            <ul><li>Giving no detail</li>
+    <li>Summary detail such as: "ROM exercises given"</li>
+    </ul>
+        </div><!-- /collapsible -->
+        <div data-role="collapsible" data-inset="false" data-theme="b" data-content-theme="a" data-collapsed-icon="arrow-r" data-expanded-icon="arrow-d">
+        <h2>essentially,  note:</h2>
+            <ul><li>range of movement (split into passive and active)</li>
+    <li>muscle strength</li>
+    <li>neurological assessment</li>
+    <li>gait</li>
+    <li>function</li>
+    </ul>
+        </div><!-- /collapsible -->
+		<div data-role="collapsible" data-inset="false" data-theme="b" data-content-theme="a" data-collapsed-icon="arrow-r" data-expanded-icon="arrow-d">
+			<h2>Using notes:</h2>
+			<p> Simply type a note and press "Enter" key. You can edit existing notes or delete a note. To delete all your notes, use "Clear". However, as this will remove all notes on this page  it is advised to copy and paste them into a document and store them elsewhere before clearing them here.</p>
+			</div><!-- /collapsible -->
+    <!-- /collapsible set -->
+<!-- /popup -->
+</div><!-- /panel -->
+		<header  data-role="" class="headerblue" > 
+		<h4 class="blue">Lumbar Objective Assessment notes</h4>
+	</header> <!-- /header -->
+
+	<div role="main" class="ui-content">
+		<p class="floatClear mini">&nbsp;</p>
+		<h2>my <span class="big-form-black">O</span>bjective notes <img src="../files/app/sym_obj_blank_ic.png"  alt="symbol objective" /></h2>
+		
+	
+	<div class="centrediv">
+    <p> <span class="mini">(after listening to my patient's account and from observing all signs and clues given)</span></p>
+<div id="container">
+            <ul id="theListlum2" contenteditable="true">
+              <li> My observations are...</li>
+            </ul>
+          <p><img src="../main/images/check-black.png" class=""  alt="symbol analysis" /> <span class="big-form-black"><a href="javascript:void();" id="saveAll">Save</a></span> &nbsp; | &nbsp; <img src="../main/images/delete-black.png" class=""  alt="symbol analysis" /> <span class="big-form-black"><a href="javascript:void();" id="clearAll">Clear</a></span></p>
+        </div> 
+	<p><span class="mini">(use info button below for guidance)</span></p>
+    
+
+</div>
+	</div>
+	<!-- /content -->
+<div data-role="footer" data-type="horizontal" data-position="fixed" class="white">
+		<a href="lumbar-assessment.html" rel="external"><img src="../images/icon_back_start_blue.png" alt="back"></a> &nbsp; &nbsp; <button onclick="goBack()" ><img src="../files/app/icback.png" alt="back"></button> &nbsp; &nbsp; <a href="#popupObjective" data-rel="popup" data-transition="pop" title="click for guidance tips"><img src="../images/icon_info_blue.png" class="" /></a> 
+</div><!-- /footer --> 
+</div><!-- /page soap2 -->
+	
+	
+<!--<script src="../main/js/soap-notes2.js"></script>-->
+<script type="text/javascript">
+	$(document).ready(function() {
+		var theListlum2 = document.getElementById('theListlum2');
+		$("#saveAll").click(function(e) {
+			e.preventDefault();
+			localStorage.setItem('todoListlum2', theListlum2.innerHTML);
+			
+		});
+		$("#clearAll").click(function(e) {
+			e.preventDefault();
+//			localStorage.clear();
+			window.localStorage.removeItem('todoListlum2', theListlum2.innerHTML);
+			location.reload();
+		});
+		
+		loadToDo();
+		
+		function loadToDo() {
+		  if ( localStorage.getItem('todoListlum2') ) {
+			theListlum2.innerHTML = localStorage.getItem('todoListlum2'); 
+			
+		  }
+		}
+	});
+</script>	
+    </body>
+</html>
